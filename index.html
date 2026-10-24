@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dashboard · FitPlanner</title>
+        <link rel="stylesheet" href="./dist/output.css">
+    </head>
+    <body class="flex flex-col bg-bg">
+        <div class="lg:px-20">
+            <header class="border-b border-surface-1">
+                <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="./assets/logo-mark.svg" alt="" class="size-9 rounded-chip shadow-glow light:hidden">
+                        <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-9 light:block">
+                        <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                    </a>
+
+                    <ul class="hidden gap-8 text-muted lg:flex">
+                        <li><a href="#features" class="hover:text-fg">Features</a></li>
+                        <li><a href="#how" class="hover:text-fg">How it works</a></li>
+                        <li><a href="exercises.html" class="hover:text-fg">Exercises</a></li>
+                    </ul>
+
+                    <div class="hidden gap-3 lg:flex">
+                        <a href="login.html" class="flex min-h-12 items-center rounded-control border border-line px-5 font-semibold">Log in</a>
+                        <a href="register.html" class="flex min-h-12 items-center rounded-control border-2 border-accent bg-surface-1 px-5 font-bold shadow-glow">Get started</a>
+                    </div>
+
+                    <a href="menu.html" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
+                        <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                        <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                        <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    </a>
+                </nav>
+            </header>
+        </div>
+        <main class="lg:px-20">
+            <section aria-labelledby="hero-title" class="mx-auto flex max-w-[1200px] flex-col gap-8 p-5 lg:flex-row lg:items-center lg:gap-14 lg:px-6 lg:pt-24 lg:pb-20">
+                <div>
+                    <div class="flex flex-col gap-5 lg:flex-1 lg:gap-6">
+                        <p class="font-mono text-sm text-accent-soft col">FITNESS & WORKOUT PLANNER</p>
+                        <h1 class="font-display text-[42px] font-bold leading-[1.04] lg:text-[64] lg:max-w-[350px]">Plan it. Log it. See it add up.</h1>
+                        <p class="max-w-[520px] text-lg text-muted lg:text-xl">
+                            Build custom routines from a full exercise library, log every set with a built-in rest timer, and watch your streak, volume and calories grow on one dashboard.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-3 lg:flex-row lg:gap-4">
+                        <a href="login.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow lg:hidden">Create free account</a>
+                        <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold lg:hidden">Browse exercises</a>
+                    </div>
+                </div>
+                <div aria-hidden="true" class="flex flex-col gap-3 rounded-card border border-accent bg-surface-1 p-4 shadow-glow lg:flex-1 lg:gap-4 lg:p-6">
+                    <div class="grid grid-cols-3 gap-2 lg:gap-3">
+                        <div class="rounded-control bg-surface-2 p-3">
+                            <p class="font-mono text-[11px] text-muted lg:text-xs">WORKOUTS</p>
+                            <p class="font-display text-2xl font-bold lg:text-3xl">48</p>
+                        </div>
+                        <div class="rounded-control bg-surface-2 p-3">
+                            <p class="font-mono text-[11px] text-muted lg:text-xs">STREAK</p>
+                            <p class="font-display text-2xl font-bold lg:text-3xl">12 d</p>
+                        </div>
+                        <div class="rounded-control bg-surface-2 p-3">
+                            <p class="font-mono text-[11px] text-muted lg:text-xs">KCAL</p>
+                            <p class="font-display text-2xl font-bold lg:text-3xl">18.4k</p>
+                        </div>
+                    </div>
+
+                    <div class="flex h-32 items-end gap-2.5 rounded-control bg-surface-2 p-3.5 lg:h-44 lg:gap-3.5 lg:p-4">
+                        <div class="h-[45%] flex-1 rounded-t-lg bg-line"></div>
+                        <div class="h-[70%] flex-1 rounded-t-lg bg-line"></div>
+                        <div class="h-[30%] flex-1 rounded-t-lg bg-line"></div>
+                        <div class="h-[88%] flex-1 rounded-t-lg bg-accent shadow-glow"></div>
+                        <div class="h-[55%] flex-1 rounded-t-lg bg-line"></div>
+                        <div class="h-[20%] flex-1 rounded-t-lg bg-line"></div>
+                        <div class="h-[62%] flex-1 rounded-t-lg bg-line"></div>
+                    </div>
+
+                    <div class="hidden items-center justify-between rounded-control bg-surface-2 px-4 py-3.5 lg:flex">
+                        <div>
+                            <p class="font-display text-lg font-bold">Push Day A</p>
+                            <p class="text-sm text-muted">Set 3 of 4 · Bench Press</p>
+                        </div>
+                        <p class="font-mono text-2xl text-accent-soft">01:30</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
