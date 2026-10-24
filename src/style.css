@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+/* Dark (default) */
+:root {
+  --bg: #000000;
+  --surface-1: #12163a;
+  --surface-2: #232952;
+  --line: #3a4078;
+  --accent: #b84dff;
+  --accent-soft: #d18cff;
+  --fg: #ecebf5;
+  --muted: #9b9ab5;
+  --success: #49d63c;
+  --warning: #f2a33a;
+  --info: #3cadd6;
+  --error: #ff7a80;
+  --glow: 0 0 18px rgba(209, 140, 255, 0.55);
+}
+
+/* Light */
+[data-theme="light"] {
+  --bg: #f6f5fb;
+  --surface-1: #ffffff;
+  --surface-2: #eceaf7;
+  --line: #cdc8ea;
+  --accent: #7a2fd0;
+  --accent-soft: #7a2fd0;
+  --fg: #12163a;
+  --muted: #55547a;
+  --success: #1f7a17;
+  --warning: #a35c00;
+  --info: #1f6f8f;
+  --error: #c62828;
+  --glow: 0 6px 22px rgba(122, 47, 208, 0.15);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-error: var(--error);
+  --shadow-glow: var(--glow);
+}
+
+@theme {
+  --font-display: "Chakra Petch", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --radius-chip: 10px;
+  --radius-control: 15px;
+  --radius-card: 20px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-fg font-body;
+  }
+}
