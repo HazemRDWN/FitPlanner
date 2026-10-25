@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Details · FitPlanner</title>
+        <link rel="stylesheet" href="./dist/output.css">
+    </head>
+    <body>
+        <header class="flex flex-row justify-between items-center p-6 pt-8 lg:hidden">
+            <a href="exercises.html" class="flex justify-center items-center bg-surface-2 rounded-control p-4">
+                <img src="assets/exercise-detail/chevron-left-accent-soft.svg" alt="">
+            </a>
+            <p class="font-mono text-sm text-muted">EXERCISE</p>
+            <a href="" class="flex justify-center items-center bg-surface-2 rounded-control p-4">
+                <img src="assets/exercise-detail/heart-accent-soft.svg" alt="">
+            </a>
+        </header>
+        <main class="flex flex-col lg:flex-row">
+            <aside class="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+                <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
+                    <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
+                    <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
+                    <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                </a>
+
+                <nav aria-label="Primary">
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/grid-muted.svg" alt="" class="size-6">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercises.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-3 border-accent bg-surface-2 px-4 text-lg text-fg">
+                                <img src="./assets/exercises/search-accent-soft.svg" alt="" class="size-6">
+                                Exercises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                Routines
+                            </a>
+                        </li>
+                        <li>
+                            <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                Workout
+                            </a>
+                        </li>
+                        <li>
+                            <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/history-muted.svg" alt="" class="size-6">
+                                History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                Profile & Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="min-w-0 flex-1 px-6 lg:flex lg:flex-row">
+                <section aria-labelledby="exercise-title" class="flex flex-col mx-auto w-full max-w-[1200px]">
+                    <div class="hidden flex-col justify-center items-start w-full mt-4 lg:flex">
+                        <div class="flex flex-row">
+                            <a href="exercises.html" class="font-body text-sm text-accent underline">Exercises</a>
+                            <p class="font-body text-sm text-muted">&nbsp;/ Barbell Bench Press</p>
+                        </div>
+                        <div class="flex flex-row flex-wrap justify-between items-center gap-4 w-full">
+                            <div class="flex flex-col justify-center items-start py-3">
+                                <h1 class="font-display text-4xl text-fg font-bold">Barbell Bench Press</h1>
+                                <div class="flex flex-row flex-wrap items-start gap-1.5 mt-2">
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto p-1 px-2 gap-2 items-center justify-center">
+                                        <div class="min-h-2.5 min-w-2.5 rounded-control bg-accent"></div>
+                                        <p class="font-body text-sm">Chest</p>
+                                    </div>
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto gap-2 p-1 px-2 items-center justify-center">
+                                        <p class="font-body text-sm">Barbell + Bench</p>
+                                    </div>
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto gap-2 p-1 px-2 items-center justify-center">
+                                        <div class="min-h-2.5 min-w-2.5 rounded-control bg-success"></div>
+                                        <p class="font-body text-sm">Intermediate</p>
+                                    </div>
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto gap-2 p-1 px-2 items-center justify-center">
+                                        <p class="font-body text-sm">Compound</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-row gap-2 justify-between items-center">
+                                <a href="" class="flex justify-center items-center bg-surface-2 rounded-control p-4">
+                                    <img src="assets/exercise-detail/heart-accent-soft.svg" alt="">
+                                </a>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-2 rounded-control border-2 border-accent bg-surface-1 px-6 text-lg font-bold text-fg shadow-glow">
+                                    <img src="assets/exercise-detail/plus-accent-soft.svg" alt="">
+                                    Add to Custom Routine
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:gap-3">
+                        <div>
+                            <video class="w-full rounded-control lg:max-w-[660px] lg:max-h-auto" controls preload="metadata">
+                                <source src="assets/exercise-detail/video1.mp4" type="video/mp4">
+                                Your browser doesn't support this format
+                            </video>
+                            <div class="lg:hidden">
+                                <h1 class="font-display text-2xl">Barbell Bench Press</h1>
+                                <div class="flex flex-row flex-wrap justify-start gap-3 items-center mt-2">
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto p-1 px-2 gap-2 items-center justify-center">
+                                        <div class="min-h-2.5 min-w-2.5 rounded-control bg-accent"></div>
+                                        <p class="font-body text-sm">Chest</p>
+                                    </div>
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto gap-2 p-1 px-2 items-center justify-center">
+                                        <p class="font-body text-sm">Barbell</p>
+                                    </div>
+                                    <div class="flex flex-row rounded-chip bg-surface-2 min-w-auto gap-2 p-1 px-2 items-center justify-center">
+                                        <div class="min-h-2.5 min-w-2.5 rounded-control bg-success"></div>
+                                        <p class="font-body text-sm">Intermediate</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 my-4 gap-2 lg:hidden">
+                                <div class="flex flex-col rounded-control justify-center items-start bg-surface-2 p-3">
+                                    <p class="font-mono text-xs text-muted">SETS x REPS</p>
+                                    <h2 class="font-body font-bold text-lg">4 x 6-10</h2>
+                                </div>
+                                <div class="flex flex-col rounded-control justify-center items-start bg-surface-2 p-3">
+                                    <p class="font-mono text-xs text-muted">REST</p>
+                                    <h2 class="font-body font-bold text-lg">90 s</h2>
+                                </div>
+                                <div class="flex flex-col rounded-control justify-center items-start bg-surface-2 p-3">
+                                    <p class="font-mono text-xs text-muted">BEST</p>
+                                    <h2 class="font-body font-bold text-lg">80 kg</h2>
+                                </div>
+                            </div>
+                            <article id="instructions" class="flex flex-col items-start justify-center p-4 rounded-card bg-surface-1 min-h-auto gap-3 lg:mt-4 lg:max-w-[660px] lg:mb-10">
+                                <h2 class="font-display font-bold text-xl">Instructions</h2>
+                                <div class="flex flex-row items-center justify-start gap-3">
+                                    <div class="flex flex-col items-center justify-center rounded-chip bg-surface-2 border-accent border-1 min-h-10 min-w-10 lg:min-h-9 lg:min-w-9">
+                                        <p class="font-mono text-md text-accent">1</p>
+                                    </div>
+                                    <p class="flex font-body text-md text-fg lg:hidden">Lie flat, eyes under the bar, feet planted, shoulder blades squeezed.</p>
+                                    <p class="hidden font-body text-sm text-fg lg:flex">Lie flat on the bench with eyes under the bar, feet planted and shoulder blades squeezed together.</p>
+                                </div>
+                                <div class="flex flex-row items-center justify-start gap-3">
+                                    <div class="flex flex-col items-center justify-center rounded-chip bg-surface-2 border-accent border-1 min-h-10 min-w-10 lg:min-h-9 lg:min-w-9">
+                                        <p class="font-mono text-md text-accent">2</p>
+                                    </div>
+                                    <p class="flex font-body text-md text-fg lg:hidden">Grip slightly wider than shoulders and unrack with straight arms.</p>
+                                    <p class="hidden font-body text-sm text-fg lg:flex">Grip the bar slightly wider than shoulder width and unrack it with straight arms over your chest.</p>
+                                </div>
+                                <div class="flex flex-row items-center justify-start gap-3">
+                                    <div class="flex flex-col items-center justify-center rounded-chip bg-surface-2 border-accent border-1 min-h-10 min-w-10 lg:min-h-9 lg:min-w-9">
+                                        <p class="font-mono text-md text-accent">3</p>
+                                    </div>
+                                    <p class="flex font-body text-md text-fg lg:hidden">Lower under control to mid-chest, elbows about 45°.</p>
+                                    <p class="hidden font-body text-sm text-fg lg:flex">Inhale and lower the bar under control to mid-chest, elbows at roughly 45° to your body.</p>
+                                </div>
+                                <div class="flex flex-row items-center justify-start gap-3">
+                                    <div class="flex flex-col items-center justify-center rounded-chip bg-surface-2 border-accent border-1 min-h-10 min-w-10 lg:min-h-9 lg:min-w-9">
+                                        <p class="font-mono text-md text-accent">4</p>
+                                    </div>
+                                    <p class="flex font-body text-md text-fg lg:hidden">Press up until arms are straight; exhale at the top.</p>
+                                    <p class="hidden font-body text-sm text-fg lg:flex">Press the bar back up and slightly toward your face until your arms are straight. Exhale at the top.</p>
+                                </div>
+                                <div class="flex flex-row items-center justify-start gap-3">
+                                    <div class="flex flex-col items-center justify-center rounded-chip bg-surface-2 border-accent border-1 min-h-10 min-w-10 lg:min-h-9 lg:min-w-9">
+                                        <p class="font-mono text-md text-accent">5</p>
+                                    </div>
+                                    <p class="flex font-body text-md text-fg lg:hidden">Re-rack by moving the bar back to the hooks first.</p>
+                                    <p class="hidden font-body text-sm text-fg lg:flex">Repeat for the planned reps, then re-rack the bar by moving it back to the hooks before bending your elbows.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="lg:min-w-[calc(100%-690px)]">
+                            <section aria-labelledby="target-title" class="flex flex-col mt-4 lg:justify-start lg:mt-0">
+                                <article class="flex flex-col items-start justify-center p-4 rounded-card bg-surface-1 gap-3">
+                                    <h2 class="font-display font-bold text-xl">Target muscles</h2>
+                                    <div class="flex flex-col justify-center items-start w-full">
+                                        <div class="flex flex-row justify-between items-center w-full">
+                                            <p class="font-body text-md text-fg">Pectorals</p>
+                                            <p class="font-mono text-sm text-accent">PRIMARY</p>
+                                        </div>
+                                        <span class="w-full min-h-2 rounded-control bg-accent"></span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-start w-full">
+                                        <div class="flex flex-row justify-between items-center w-full">
+                                            <p class="font-body text-md text-fg">Front deltoids</p>
+                                            <p class="font-mono text-sm text-muted">SECONDARY</p>
+                                        </div>
+                                        <div class="w-full min-h-2 rounded-control bg-surface-2">
+                                            <div class="w-[50%] min-h-2 rounded-control bg-accent-soft"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-start w-full">
+                                        <div class="flex flex-row justify-between items-center w-full">
+                                            <p class="font-body text-md text-fg">Triceps</p>
+                                            <p class="font-mono text-sm text-muted">SECONDARY</p>
+                                        </div>
+                                        <div class="w-full min-h-2 rounded-control bg-surface-2">
+                                            <div class="w-[40%] min-h-2 rounded-control bg-accent-soft"></div>
+                                        </div>
+                                    </div>
+                                </article>
+            
+                                <aside aria-labelledby="safety-title" class="rounded-card border-l-4 border-warning bg-surface-2 p-5 mt-4">
+                                    <h2 id="safety-title" class="mb-3 flex items-center gap-3 font-display text-xl font-bold">
+                                        <img src="./assets/exercise-detail/warning-warning.svg" alt="" class="size-6">
+                                        Safety tips
+                                    </h2>
+            
+                                    <ul class="flex list-disc flex-col gap-2 pl-5 leading-relaxed lg:hidden">
+                                        <li>Use a spotter or safety arms when going heavy.</li>
+                                        <li>Keep wrists stacked over elbows.</li>
+                                        <li>Never bounce the bar off your chest.</li>
+                                    </ul>
+
+                                    <ul class="hidden list-disc flex-col gap-2 pl-5 leading-relaxed lg:flex lg:max-w-90">
+                                        <li>Use a spotter or safety arms when going heavy.</li>
+                                        <li>Keep your wrists stacked over your elbows; don't let them bend back.</li>
+                                        <li>Never bounce the bar off your chest.</li>
+                                        <li>Keep hips on the bench and feet on the floor.</li>
+                                    </ul>
+                                </aside>
+
+                                <article class="hidden flex-col items-start justify-center p-4 rounded-card bg-surface-1 gap-3 mt-4 lg:flex">
+                                    <h2 class="font-display font-bold text-xl">Quick facts</h2>
+                                    <div class="grid grid-cols-2">
+                                        <div class="flex flex-col justify-center items-start mb-4">
+                                            <p class="font-mono text-xs text-muted">SUGGESTED</p>
+                                            <h2 class="font-body text-lg">4 x 6-10 reps</h2>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-start mb-4 ml-15">
+                                            <p class="font-mono text-xs text-muted">REST</p>
+                                            <h2 class="font-body text-lg">90 seconds</h2>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-start">
+                                            <p class="font-mono text-xs text-muted">EST. BURN</p>
+                                            <h2 class="font-body text-lg">≈ 6 kcal / min</h2>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-start ml-15">
+                                            <p class="font-mono text-xs text-muted">YOUR BEST</p>
+                                            <h2 class="font-body text-lg">80 kg x 6</h2>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                    
+                </section>
+
+
+                <a href="routine-builder.html" class="flex flex-row justify-center items-center border-accent rounded-control shadow-glow border-3 bg-surface-1 w-full p-4 my-8 font-body font-bold text-xl text-fg gap-2 lg:hidden">
+                    <img src="assets/exercise-detail/plus-accent-soft.svg" alt="">
+                    Add to Custom Routine
+                </a>
+            </div>
+        </main>
+    </body>
+</html>
