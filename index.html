@@ -35,10 +35,10 @@
                 </nav>
             </header>
         </div>
-        <main class="lg:px-20">
-            <section aria-labelledby="hero-title" class="mx-auto flex max-w-[1200px] flex-col gap-8 p-5 lg:flex-row lg:items-center lg:gap-14 lg:px-6 lg:pt-24 lg:pb-20">
+        <main class="p-5 lg:px-20">
+            <section aria-labelledby="hero-title" class="mx-auto flex max-w-[1200px] flex-col gap-8 lg:flex-row lg:items-center lg:gap-14 lg:px-6 lg:pt-24 lg:pb-20">
                 <div>
-                    <div class="flex flex-col gap-5 lg:flex-1 lg:gap-6">
+                    <div class="flex flex-col gap-5 mb-5 lg:flex-1 lg:gap-6">
                         <p class="font-mono text-sm text-accent-soft col">FITNESS & WORKOUT PLANNER</p>
                         <h1 class="font-display text-[42px] font-bold leading-[1.04] lg:text-[64] lg:max-w-[350px]">Plan it. Log it. See it add up.</h1>
                         <p class="max-w-[520px] text-lg text-muted lg:text-xl">
@@ -50,7 +50,7 @@
                         <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold lg:hidden">Browse exercises</a>
                     </div>
                 </div>
-                <div aria-hidden="true" class="flex flex-col gap-3 rounded-card border border-accent bg-surface-1 p-4 shadow-glow lg:flex-1 lg:gap-4 lg:p-6">
+                <div aria-hidden="true" class="flex flex-col gap-3 mb-7 rounded-card border border-accent bg-surface-1 p-4 shadow-glow lg:flex-1 lg:gap-4 lg:p-6">
                     <div class="grid grid-cols-3 gap-2 lg:gap-3">
                         <div class="rounded-control bg-surface-2 p-3">
                             <p class="font-mono text-[11px] text-muted lg:text-xs">WORKOUTS</p>
@@ -85,6 +85,102 @@
                     </div>
                 </div>
             </section>
+            <section aria-labelledby="features-title" id="features" class="mx-auto flex max-w-[1200px] flex-col">
+                <h1 class="font-display text-[30px] font-bold leading-[1.04] mb-5 lg:text-[40]">Everything for your training, in one place</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div class="flex flex-row justify-start rounded-control bg-surface-1 p-5 gap-3 lg:flex-col">
+                        <div>
+                            <img src="assets/home/chart-bars-accent-soft.svg" alt="" class="size-8">
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Progress dashboard</p>
+                            <p class="flex font-body text-[16px] max-w-[250px] text-muted lg:hidden lg:text-sm">Workouts, streak, calories and weekly charts.</p>
+                            <p class="hidden font-body text-[16px] max-w-[200px] text-muted lg:flex lg:text-sm">Total workouts, active streak and calories at a glance, plus weekly and muscle-group charts.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-start rounded-control bg-surface-1 p-5 gap-3 lg:flex-col">
+                        <div>
+                            <img src="assets/home/search-accent-soft.svg" alt="" class="size-8">
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Exercise library</p>
+                            <p class="flex font-body text-[16px] max-w-[250px] text-muted lg:hidden lg:text-sm">Instant search with muscle, equipment and difficulty filters.</p>
+                            <p class="hidden font-body text-[16px] max-w-[200px] text-muted lg:flex lg:text-sm">Search instantly and filter by muscle, equipment and difficulty. Every move has steps, safety tips and a demo.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-start rounded-control bg-surface-1 p-5 gap-3 lg:flex-col">
+                        <div>
+                            <img src="assets/home/list-accent-soft.svg" alt="" class="size-8">
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Routine builder</p>
+                            <p class="flex font-body text-[16px] max-w-[250px] text-muted lg:hidden lg:text-sm">Order exercises and set sets, reps and rest.</p>
+                            <p class="hidden font-body text-[16px] max-w-[200px] text-muted lg:flex lg:text-sm">Drag to order exercises, set sets, reps and rest, and save routines for every split.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-start rounded-control bg-surface-1 p-5 gap-3 lg:flex-col">
+                        <div>
+                            <img src="assets/home/timer-accent-soft.svg" alt="" class="size-8">
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Live workout log</p>
+                            <p class="flex font-body text-[16px] max-w-[250px] text-muted lg:hidden lg:text-sm">Big set checkboxes, rest timer and CSV/JSON export.</p>
+                            <p class="hidden font-body text-[16px] max-w-[200px] text-muted lg:flex lg:text-sm">Tick off sets with big gym-friendly checkboxes and let the rest timer pace you. Export history as CSV or JSON.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="how-title" id="how" class="mx-auto flex max-w-[1200px] flex-col lg:mt-15">
+                <h1 class="font-display text-[30px] font-bold leading-[1.04] my-5 lg:text-[40]">How it works</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="flex flex-row justify-start rounded-control border-1 border-line p-5 gap-3 lg:flex-col">
+                        <div>
+                            <p class="font-mono text-[16px] text-accent-soft">01</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Pick exercises</p>
+                            <p class="flex font-body text-[16px] max-w-[250px] text-muted lg:hidden lg:text-sm">Quick-add moves from the library.</p>
+                            <p class="hidden font-body text-[16px] max-w-[300px] text-muted lg:flex lg:text-sm">Browse the library and quick-add moves to a routine.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-start rounded-control border-1 border-line p-5 gap-3 lg:flex-col">
+                        <div>
+                            <p class="font-mono text-[16px] text-accent-soft">02</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Train & log</p>
+                            <p class="flex font-body text-[16px] max-w-[250px] text-muted lg:hidden lg:text-sm">Check off each set at the gym.</p>
+                            <p class="hidden font-body text-[16px] max-w-[300px] text-muted lg:flex lg:text-sm">Start a session on your phone and check off each set.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-start rounded-control border-1 border-line p-5 gap-3 lg:flex-col">
+                        <div>
+                            <p class="font-mono text-[16px] text-accent-soft">03</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-xl font-bold lg:text-2xl">Review progress</p>
+                            <p class="flex font-body text-[16px] max-w-[300px] text-muted lg:hidden lg:text-sm">Streaks, volume and calories update.</p>
+                            <p class="hidden font-body text-[16px] max-w-[250px] text-muted lg:flex lg:text-sm">Your dashboard updates with streaks, volume and calories.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section aria-labelledby="started-title" class="flex flex-col mx-auto max-w-[1200px] items-center rounded-control bg-surface-1 border-2 border-accent shadow-glow p-4 my-10 lg:flex-row lg:justify-between lg:p-8">
+                <div class="w-full">
+                    <h1 class="font-display font-bold text-2xl lg:w-full">Ready for your next session?</h1>
+                    <p class="font-body text-sm text-muted mt-2 lg:mt-0">Free. Your data stays on your device.</p>
+                </div>
+                <div class="flex flex-col justify-center items-end w-full mt-3 lg:mt-0">
+                    <a href="register.html" class="flex flex-row items-center justify-center font-bold text-lg rounded-control bg-surface-2 border-2 border-accent min-h-14 w-full lg:max-w-[200px]">Get Started</a>
+                </div>
+            </section>
         </main>
+        <footer class="border-t border-surface-1">
+            <div class="mx-auto flex max-w-[1200px] flex-col items-start justify-between px-5 py-6 lg:px-6 lg:flex-row lg:items-center">
+                <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
+                <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
+            </div>
+        </footer>
     </body>
 </html>
