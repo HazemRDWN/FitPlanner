@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dashboard · FitPlanner</title>
+        <title>Home · FitPlanner</title>
         <link rel="stylesheet" href="./dist/output.css">
     </head>
     <body class="flex flex-col bg-bg">
         <div class="lg:px-20">
-            <header class="border-b border-surface-1">
+            <header class="border-surface-1">
                 <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
                     <a href="index.html" class="flex items-center gap-3">
                         <img src="./assets/logo-mark.svg" alt="" class="size-9 rounded-chip shadow-glow light:hidden">
@@ -40,14 +40,14 @@
                 <div>
                     <div class="flex flex-col gap-5 mb-5 lg:flex-1 lg:gap-6">
                         <p class="font-mono text-sm text-accent-soft col">FITNESS & WORKOUT PLANNER</p>
-                        <h1 class="font-display text-[42px] font-bold leading-[1.04] lg:text-[64] lg:max-w-[350px]">Plan it. Log it. See it add up.</h1>
+                        <h1 id="hero-title" class="font-display text-[42px] font-bold leading-[1.04] lg:text-[64px] lg:max-w-[450px]">Plan it. Log it. See it add up.</h1>
                         <p class="max-w-[520px] text-lg text-muted lg:text-xl">
                             Build custom routines from a full exercise library, log every set with a built-in rest timer, and watch your streak, volume and calories grow on one dashboard.
                         </p>
                     </div>
                     <div class="flex flex-col gap-3 lg:flex-row lg:gap-4">
-                        <a href="login.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow lg:hidden">Create free account</a>
-                        <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold lg:hidden">Browse exercises</a>
+                        <a href="register.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow">Create free account</a>
+                        <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold">Browse exercises</a>
                     </div>
                 </div>
                 <div aria-hidden="true" class="flex flex-col gap-3 mb-7 rounded-card border border-accent bg-surface-1 p-4 shadow-glow lg:flex-1 lg:gap-4 lg:p-6">
@@ -86,7 +86,7 @@
                 </div>
             </section>
             <section aria-labelledby="features-title" id="features" class="mx-auto flex max-w-[1200px] flex-col">
-                <h1 class="font-display text-[30px] font-bold leading-[1.04] mb-5 lg:text-[40]">Everything for your training, in one place</h1>
+                <h2 id="features-title" class="font-display text-[30px] font-bold leading-[1.04] mb-5 lg:text-[40px]">Everything for your training, in one place</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div class="flex flex-row justify-start rounded-control bg-surface-1 p-5 gap-3 lg:flex-col">
                         <div>
@@ -132,7 +132,7 @@
             </section>
 
             <section aria-labelledby="how-title" id="how" class="mx-auto flex max-w-[1200px] flex-col lg:mt-15">
-                <h1 class="font-display text-[30px] font-bold leading-[1.04] my-5 lg:text-[40]">How it works</h1>
+                <h2 id="how-title" class="font-display text-[30px] font-bold leading-[1.04] my-5 lg:text-[40px]">How it works</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     <div class="flex flex-row justify-start rounded-control border-1 border-line p-5 gap-3 lg:flex-col">
                         <div>
@@ -168,7 +168,7 @@
             </section>
             <section aria-labelledby="started-title" class="flex flex-col mx-auto max-w-[1200px] items-center rounded-control bg-surface-1 border-2 border-accent shadow-glow p-4 my-10 lg:flex-row lg:justify-between lg:p-8">
                 <div class="w-full">
-                    <h1 class="font-display font-bold text-2xl lg:w-full">Ready for your next session?</h1>
+                    <h2 id="started-title" class="font-display font-bold text-2xl lg:w-full">Ready for your next session?</h2>
                     <p class="font-body text-sm text-muted mt-2 lg:mt-0">Free. Your data stays on your device.</p>
                 </div>
                 <div class="flex flex-col justify-center items-end w-full mt-3 lg:mt-0">
