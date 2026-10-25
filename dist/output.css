@@ -302,6 +302,10 @@
   .table {
     display: table;
   }
+  .size-1 {
+    width: var(--spacing);
+    height: var(--spacing);
+  }
   .size-1\.5 {
     width: calc(var(--spacing) * 1.5);
     height: calc(var(--spacing) * 1.5);
@@ -1205,6 +1209,9 @@
     }
     .lg\:text-\[16px\] {
       font-size: 16px;
+    }
+    .lg\:text-\[18px\] {
+      font-size: 18px;
     }
     .lg\:text-\[20px\] {
       font-size: 20px;
