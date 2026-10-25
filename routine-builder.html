@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Routine Builder · FitPlanner</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="min-h-screen">
+    <div class="flex min-h-screen">
+        <aside class="sticky top-0 hidden h-screen w-66 shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+            <a href="dashboard.html" class="mb-10 flex min-h-11 items-center gap-3 px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
+                <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
+                <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+            </a>
+            <nav aria-label="Primary">
+                <ul class="flex flex-col gap-2">
+                    <li><a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/exercises/grid-muted.svg" alt="" class="size-6">Dashboard</a></li>
+                    <li><a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/dashboard/search-muted.svg" alt="" class="size-6">Exercises</a></li>
+                    <li><a href="routine-builder.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/list-accent-soft.svg" alt="" class="size-6">Routines</a></li>
+                    <li><a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">Workout</a></li>
+                    <li><a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/exercises/history-muted.svg" alt="" class="size-6">History</a></li>
+                    <li><a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/exercises/user-muted.svg" alt="" class="size-6">Profile &amp; Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="min-w-0 flex-1 px-5 pb-36 pt-7 lg:px-10 lg:pb-24 lg:pt-8">
+            <header>
+                <div class="mb-5 flex items-center justify-between lg:hidden">
+                    <a href="dashboard.html" aria-label="Back to dashboard" class="flex size-12 items-center justify-center rounded-control bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-left-accent-soft.svg" alt="" class="size-6"></a>
+                    <span class="flex items-center gap-1.5 text-xs text-muted"><span class="size-2 rounded-full bg-success"></span>Draft saved</span>
+                    <a href="dashboard.html" aria-label="Open dashboard navigation" class="flex size-12 flex-col items-center justify-center gap-2 text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="h-1 w-8 rounded bg-current shadow-glow"></span><span class="h-1 w-8 rounded bg-current shadow-glow"></span><span class="h-1 w-8 rounded bg-current shadow-glow"></span></a>
+                </div>
+                <nav aria-label="Breadcrumb" class="hidden items-center gap-3 text-sm text-muted lg:flex"><a href="routine-builder.html" class="inline-flex min-h-11 items-center text-accent-soft underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Routines</a><span>/</span><span>Edit</span></nav>
+                <div class="mb-4 flex items-end justify-between gap-4 lg:mb-7">
+                    <h1 class="font-display text-3xl font-bold leading-tight lg:text-4xl">Routine Builder</h1>
+                    <p class="hidden items-center gap-2 text-sm text-muted lg:flex"><span class="size-2 rounded-full bg-success"></span>Draft saved on this device</p>
+                </div>
+            </header>
+            <form class="flex flex-col items-start gap-4 lg:gap-6 xl:flex-row">
+                <section aria-labelledby="details-heading" class="w-full min-w-0 lg:rounded-card lg:bg-surface-1 lg:p-6 xl:w-2/5">
+                    <h2 id="details-heading" class="mb-5 hidden text-[22px] font-semibold lg:block">Details</h2>
+                    <label for="routine-name" class="mb-2 block font-mono text-sm text-muted">ROUTINE NAME</label>
+                    <input id="routine-name" name="routine-name" value="Push Day A" class="h-15 w-full rounded-control bg-surface-2 px-5 text-lg lg:h-14 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft" required>
+                    <div class="mt-4 hidden lg:block">
+                        <label for="description" class="mb-2 block font-mono text-sm text-muted">DESCRIPTION (optional)</label>
+                        <textarea id="description" name="description" placeholder="e.g. Heavy chest focus, finish with triceps" class="h-23 w-full resize-y rounded-control bg-surface-2 px-5 py-4 placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></textarea>
+                    </div>
+                    <fieldset class="mt-4">
+                        <legend class="mb-2 font-mono text-sm text-muted">SCHEDULE</legend>
+                        <div class="grid grid-cols-7 gap-1.5 text-xs font-semibold lg:gap-1">
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="monday" checked class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">Mo</span><span class="hidden lg:inline">Mon</span></label>
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="tuesday" class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">Tu</span><span class="hidden lg:inline">Tue</span></label>
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="wednesday" class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">We</span><span class="hidden lg:inline">Wed</span></label>
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="thursday" checked class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">Th</span><span class="hidden lg:inline">Thu</span></label>
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="friday" class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">Fr</span><span class="hidden lg:inline">Fri</span></label>
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="saturday" class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">Sa</span><span class="hidden lg:inline">Sat</span></label>
+                            <label class="flex min-h-11 cursor-pointer flex-col items-center justify-center gap-1 rounded-control bg-surface-2 py-2"><input type="checkbox" name="schedule" value="sunday" class="size-5 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="lg:hidden">Su</span><span class="hidden lg:inline">Sun</span></label>
+                        </div>
+                    </fieldset>
+                    <div class="mt-5 hidden lg:block"><label for="focus" class="mb-2 block font-mono text-sm text-muted">FOCUS</label><select id="focus" name="focus" class="min-h-14 w-full rounded-control bg-surface-2 px-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><option>Push (chest, shoulders, triceps)</option><option>Pull (back, biceps)</option><option>Legs</option><option>Full body</option></select></div>
+                </section>
+                <section aria-labelledby="exercises-heading" class="w-full min-w-0 xl:w-3/5">
+                    <div class="mb-3 flex items-center justify-between gap-2 lg:justify-start"><h2 id="exercises-heading" class="text-[22px] font-semibold">Exercises</h2><span class="font-mono text-xs text-muted lg:hidden">5 · 17 SETS · ~55 MIN</span><span class="hidden font-mono text-sm font-bold text-muted lg:inline">· drag or use arrows to reorder</span></div>
+                    <ol class="space-y-3">
+                        <li class="rounded-card bg-surface-2 p-3.5 lg:p-4">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex min-w-0 items-center gap-3"><img src="./assets/routine-builder/drag-handle-muted.svg" alt="" class="hidden size-6 lg:block"><span class="flex size-8 shrink-0 items-center justify-center rounded-chip bg-surface-1 text-accent-soft">1</span><div><h3 class="font-semibold leading-5 lg:text-lg">Barbell Bench Press</h3><p class="text-sm text-muted">Chest · Barbell</p></div></div>
+                                <button type="button" aria-label="Remove Barbell Bench Press" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/trash-error.svg" alt="" class="size-5"></button>
+                            </div>
+                            <div class="mt-3 flex items-end gap-2">
+                                <div class="grid min-w-0 flex-1 grid-cols-3 gap-2">
+                                    <label class="min-w-0 text-xs text-muted">SETS<input aria-label="Barbell Bench Press sets" name="bench-sets" value="4" inputmode="numeric" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REPS<input aria-label="Barbell Bench Press reps" name="bench-reps" value="6–8" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REST<input aria-label="Barbell Bench Press rest" name="bench-rest" value="120s" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                </div>
+                                <button type="button" aria-label="Move Barbell Bench Press up" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-up-fg.svg" alt="" class="size-5"></button>
+                                <button type="button" aria-label="Move Barbell Bench Press down" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-down-fg.svg" alt="" class="size-5"></button>
+                            </div>
+                        </li>
+                        <li class="rounded-card bg-surface-2 p-3.5 lg:p-4 lg:ring-2 lg:ring-accent lg:shadow-glow">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex min-w-0 items-center gap-3"><img src="./assets/routine-builder/drag-handle-muted.svg" alt="" class="hidden size-6 lg:block"><span class="flex size-8 shrink-0 items-center justify-center rounded-chip bg-surface-1 text-accent-soft">2</span><div><h3 class="font-semibold leading-5 lg:text-lg">Incline Dumbbell Press</h3><p class="text-sm text-muted">Chest · Dumbbell</p></div></div>
+                                <button type="button" aria-label="Remove Incline Dumbbell Press" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/trash-error.svg" alt="" class="size-5"></button>
+                            </div>
+                            <div class="mt-3 flex items-end gap-2">
+                                <div class="grid min-w-0 flex-1 grid-cols-3 gap-2">
+                                    <label class="min-w-0 text-xs text-muted">SETS<input aria-label="Incline Dumbbell Press sets" name="incline-sets" value="3" inputmode="numeric" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REPS<input aria-label="Incline Dumbbell Press reps" name="incline-reps" value="8–10" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REST<input aria-label="Incline Dumbbell Press rest" name="incline-rest" value="90s" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                </div>
+                                <button type="button" aria-label="Move Incline Dumbbell Press up" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-up-fg.svg" alt="" class="size-5"></button>
+                                <button type="button" aria-label="Move Incline Dumbbell Press down" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-down-fg.svg" alt="" class="size-5"></button>
+                            </div>
+                        </li>
+                        <li class="rounded-card bg-surface-2 p-3.5 lg:p-4">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex min-w-0 items-center gap-3"><img src="./assets/routine-builder/drag-handle-muted.svg" alt="" class="hidden size-6 lg:block"><span class="flex size-8 shrink-0 items-center justify-center rounded-chip bg-surface-1 text-accent-soft">3</span><div><h3 class="font-semibold leading-5 lg:text-lg">Overhead Press</h3><p class="text-sm text-muted">Shoulders · Barbell</p></div></div>
+                                <button type="button" aria-label="Remove Overhead Press" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/trash-error.svg" alt="" class="size-5"></button>
+                            </div>
+                            <div class="mt-3 flex items-end gap-2">
+                                <div class="grid min-w-0 flex-1 grid-cols-3 gap-2">
+                                    <label class="min-w-0 text-xs text-muted">SETS<input aria-label="Overhead Press sets" name="overhead-sets" value="4" inputmode="numeric" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REPS<input aria-label="Overhead Press reps" name="overhead-reps" value="6–8" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REST<input aria-label="Overhead Press rest" name="overhead-rest" value="120s" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                </div>
+                                <button type="button" aria-label="Move Overhead Press up" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-up-fg.svg" alt="" class="size-5"></button>
+                                <button type="button" aria-label="Move Overhead Press down" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-down-fg.svg" alt="" class="size-5"></button>
+                            </div>
+                        </li>
+                        <li class="rounded-card bg-surface-2 p-3.5 lg:p-4">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex min-w-0 items-center gap-3"><img src="./assets/routine-builder/drag-handle-muted.svg" alt="" class="hidden size-6 lg:block"><span class="flex size-8 shrink-0 items-center justify-center rounded-chip bg-surface-1 text-accent-soft">4</span><div><h3 class="font-semibold leading-5 lg:text-lg">Machine Chest Press</h3><p class="text-sm text-muted">Chest · Machine</p></div></div>
+                                <button type="button" aria-label="Remove Machine Chest Press" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/trash-error.svg" alt="" class="size-5"></button>
+                            </div>
+                            <div class="mt-3 flex items-end gap-2">
+                                <div class="grid min-w-0 flex-1 grid-cols-3 gap-2">
+                                    <label class="min-w-0 text-xs text-muted">SETS<input aria-label="Machine Chest Press sets" name="machine-sets" value="3" inputmode="numeric" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REPS<input aria-label="Machine Chest Press reps" name="machine-reps" value="10–12" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REST<input aria-label="Machine Chest Press rest" name="machine-rest" value="60s" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                </div>
+                                <button type="button" aria-label="Move Machine Chest Press up" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-up-fg.svg" alt="" class="size-5"></button>
+                                <button type="button" aria-label="Move Machine Chest Press down" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-down-fg.svg" alt="" class="size-5"></button>
+                            </div>
+                        </li>
+                        <li class="rounded-card bg-surface-2 p-3.5 lg:p-4">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex min-w-0 items-center gap-3"><img src="./assets/routine-builder/drag-handle-muted.svg" alt="" class="hidden size-6 lg:block"><span class="flex size-8 shrink-0 items-center justify-center rounded-chip bg-surface-1 text-accent-soft">5</span><div><h3 class="font-semibold leading-5 lg:text-lg">Tricep Rope Pushdown</h3><p class="text-sm text-muted">Triceps · Cable</p></div></div>
+                                <button type="button" aria-label="Remove Tricep Rope Pushdown" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/trash-error.svg" alt="" class="size-5"></button>
+                            </div>
+                            <div class="mt-3 flex items-end gap-2">
+                                <div class="grid min-w-0 flex-1 grid-cols-3 gap-2">
+                                    <label class="min-w-0 text-xs text-muted">SETS<input aria-label="Tricep Rope Pushdown sets" name="tricep-sets" value="3" inputmode="numeric" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REPS<input aria-label="Tricep Rope Pushdown reps" name="tricep-reps" value="12–15" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                    <label class="min-w-0 text-xs text-muted">REST<input aria-label="Tricep Rope Pushdown rest" name="tricep-rest" value="60s" class="mt-1 h-11 w-full rounded-control border border-line bg-surface-1 px-2.5 text-base font-semibold text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                                </div>
+                                <button type="button" aria-label="Move Tricep Rope Pushdown up" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-up-fg.svg" alt="" class="size-5"></button>
+                                <button type="button" aria-label="Move Tricep Rope Pushdown down" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/chevron-down-fg.svg" alt="" class="size-5"></button>
+                            </div>
+                        </li>
+                    </ol>
+                    <a href="exercises.html" class="mt-3 flex min-h-16 items-center justify-center gap-3 rounded-control border-2 border-dashed border-line text-lg font-semibold text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><img src="./assets/routine-builder/plus-accent-soft.svg" alt="" class="size-5"><span class="lg:hidden">Add exercise</span><span class="hidden lg:inline">Add exercise from library</span></a>
+                    <footer class="fixed inset-x-0 bottom-0 z-10 border-t border-surface-1 bg-bg px-5 pb-7 pt-4 lg:static lg:mt-5 lg:flex lg:flex-wrap lg:items-center lg:justify-between lg:gap-3 lg:rounded-card lg:border-0 lg:bg-surface-1 lg:p-5">
+                        <dl class="hidden gap-8 lg:flex"><div><dt class="font-mono text-xs text-muted">EXERCISES</dt><dd class="text-2xl font-bold">5</dd></div><div><dt class="font-mono text-xs text-muted">TOTAL SETS</dt><dd class="text-2xl font-bold">17</dd></div><div><dt class="font-mono text-xs text-muted">EST. TIME</dt><dd class="whitespace-nowrap text-2xl font-bold">~55 min</dd></div></dl>
+                        <div class="flex gap-3"><a href="dashboard.html" class="hidden min-h-14 items-center justify-center rounded-control bg-surface-2 px-6 font-semibold lg:flex focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Cancel</a><button type="button" class="min-h-16 w-full rounded-control border-2 border-accent bg-surface-1 px-7 text-2xl font-bold shadow-glow lg:min-h-14 lg:w-auto lg:whitespace-nowrap lg:text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Save routine</button></div>
+                    </footer>
+                </section>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

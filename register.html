@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up · FitPlanner</title>
+    <link rel="stylesheet" href="./dist/output.css">
+  </head>
+  <body class="min-h-screen">
+    <div class="min-h-screen lg:grid lg:grid-cols-2">
+      <aside class="flex flex-col px-[22px] pt-7 lg:min-h-screen lg:bg-surface-1 lg:p-14">
+        <a href="index.html" aria-label="FitPlanner home" class="flex min-h-11 w-fit items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+          <img src="./assets/logo-mark.svg" alt="" class="size-9 rounded-chip shadow-glow light:hidden">
+          <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-9 light:block">
+          <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+        </a>
+        <div class="hidden flex-1 flex-col justify-center lg:flex">
+          <h2 class="max-w-md font-display text-5xl leading-[1.05] font-bold">Start your first<br>routine today.</h2>
+          <ul class="mt-6 space-y-3 text-lg">
+            <li class="flex gap-4"><span aria-hidden="true" class="text-accent-soft">✓</span>Full exercise library with demos</li>
+            <li class="flex gap-4"><span aria-hidden="true" class="text-accent-soft">✓</span>Unlimited custom routines</li>
+            <li class="flex gap-4"><span aria-hidden="true" class="text-accent-soft">✓</span>Export your history any time</li>
+          </ul>
+        </div>
+        <p class="hidden text-sm text-muted lg:block">© 2026 FitPlanner</p>
+      </aside>
+      <main id="main" class="px-[22px] pt-7 pb-14 lg:flex lg:min-h-screen lg:items-center lg:justify-center lg:px-12 lg:py-20">
+        <div class="mx-auto w-full max-w-[440px]">
+          <h1 class="font-display text-[32px] leading-tight font-bold">Sign Up</h1>
+          <p class="mt-2 text-lg text-muted">Create your account in under a minute.</p>
+          <!-- Static validation and strength states reproduce the supplied design. -->
+          <form action="dashboard.html" method="get" class="mt-5 space-y-5 lg:mt-5">
+            <div>
+              <label for="full-name" class="mb-2 block font-mono text-sm tracking-wider text-muted uppercase">Full name</label>
+              <input id="full-name" name="name" autocomplete="name" required placeholder="Your name" class="h-15 w-full rounded-control bg-surface-2 px-5 text-lg placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+            </div>
+            <div>
+              <label for="email" class="mb-2 block font-mono text-sm tracking-wider text-muted uppercase">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="h-15 w-full rounded-control bg-surface-2 px-5 text-lg placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+            </div>
+            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-4">
+              <div class="min-w-0">
+                <label for="password" class="mb-2 block font-mono text-sm tracking-wider text-muted uppercase">Password</label>
+                <input id="password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="password-help" class="h-15 w-full min-w-0 rounded-control bg-surface-2 px-5 text-lg placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                <div aria-hidden="true" class="mt-2 grid grid-cols-3 gap-1"><span class="h-1 rounded-full bg-success"></span><span class="h-1 rounded-full bg-success"></span><span class="h-1 rounded-full bg-line"></span></div>
+                <p id="password-help" class="mt-2 text-sm text-muted">8+ characters · Medium<span class="lg:hidden"> strength</span></p>
+              </div>
+              <div class="min-w-0">
+                <label for="confirm-password" class="mb-2 block font-mono text-sm tracking-wider text-muted uppercase"><span class="lg:hidden">Confirm password</span><span class="hidden lg:inline">Confirm</span></label>
+                <input id="confirm-password" type="password" autocomplete="new-password" required aria-invalid="true" aria-describedby="password-error" class="h-15 w-full min-w-0 rounded-control border-2 border-error bg-surface-2 px-5 text-lg placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                <p id="password-error" class="mt-2 text-sm text-error"><span aria-hidden="true">⊙</span> Passwords don’t match</p>
+              </div>
+            </div>
+            <div>
+              <label for="goal" class="mb-2 block font-mono text-sm tracking-wider text-muted uppercase">Main goal</label>
+              <select id="goal" name="goal" class="h-15 w-full rounded-control border-r-10 border-transparent bg-surface-2 px-5 text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                <option value="muscle">Build muscle</option><option value="strength">Get stronger</option><option value="fitness">Improve fitness</option><option value="weight">Manage weight</option>
+              </select>
+            </div>
+            <div class="flex min-h-11 items-center gap-3 py-1 text-sm lg:text-base">
+              <label for="terms" class="flex min-h-11 min-w-11 items-center justify-center"><input id="terms" type="checkbox" required class="size-6 accent-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span class="sr-only">I agree to the Terms and Privacy Policy</span></label>
+              <p>I agree to the <a href="index.html#terms" class="inline-flex min-h-11 items-center px-1 text-accent-soft underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Terms</a> <span class="lg:hidden">&amp;</span><span class="hidden lg:inline">and</span> <a href="index.html#privacy" class="inline-flex min-h-11 items-center px-1 text-accent-soft underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Privacy<span class="hidden lg:inline">&nbsp;Policy</span></a></p>
+            </div>
+            <button type="submit" class="min-h-16 w-full rounded-control border-2 border-accent bg-surface-1 font-display text-2xl font-bold shadow-glow hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Sign Up</button>
+          </form>
+          <p class="mt-3 text-center text-base text-muted">Already have an account? <a href="login.html" class="inline-flex min-h-11 items-center font-semibold text-accent-soft underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Sign In</a></p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
