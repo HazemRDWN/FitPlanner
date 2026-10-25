@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exercise Library · FitPlanner</title>
+        <link rel="stylesheet" href="./dist/output.css">
+    </head>
+
+    <body>
+
+        <header class="lg:hidden">
+            <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="./assets/logo-mark.svg" alt="FitPlanner Logo" class="size-9 rounded-chip shadow-glow light:hidden">
+                    <img src="./assets/logo-mark-light.svg" alt="FitPlanner Logo" class="hidden size-9 light:block">
+                    <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                </a>
+
+                <a href="menu.html" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="flex flex-row">
+
+            <aside class="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+                <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
+                    <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
+                    <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
+                    <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                </a>
+
+                <nav aria-label="Primary">
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/dashboard/grid-muted.svg" alt="" class="size-6">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercises.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg text-fg">
+                                <img src="./assets/dashboard/search-accent-soft.svg" alt="" class="size-6">
+                                Exercises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                Routines
+                            </a>
+                        </li>
+                        <li>
+                            <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                Workout
+                            </a>
+                        </li>
+                        <li>
+                            <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/history-muted.svg" alt="" class="size-6">
+                                History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                Profile & Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </aside>
+
+            <div class="mx-auto flex w-full min-w-0 flex-col px-4 pb-6 pt-0 lg:px-8 lg:pt-8">
+
+                <div class="flex flex-row items-start justify-between gap-4">
+
+                    <div class="flex flex-col">
+
+                        <h1 class="font-display text-[30px] font-bold leading-[1.04] lg:text-[36px]">Exercise Library</h1>
+                        <p class="hidden font-mono text-muted text-[12px] leading-[2] lg:block">Browse, filter and quick-add exercises to your routines.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-5 flex flex-col gap-3 lg:rounded-control lg:bg-surface-1 lg:p-5">
+
+                    <div class="flex h-14 items-center gap-3 rounded-control border-2 border-accent bg-surface-2 px-2 shadow-glow lg:h-12 lg:bg-surface-2">
+
+                        <img src="assets/exercises/search-accent-soft.svg" alt="Magnifier icon" class="size-5">
+                        <input type="search" value="press" aria-label="Search exercises" class="w-full bg-transparent text-sm text-fg outline-none placeholder:text-muted">
+                        <button aria-label="Clear search" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 text-sm text-muted lg:bg-surface-1">
+
+                            <img src="assets/exercises/close-muted.svg" alt="Magnifier icon" class="size-5">
+
+                        </button>
+
+                    </div>
+
+                    <div class="flex flex-row gap-2 overflow-x-auto lg:hidden">
+
+                        <button class="flex h-11 shrink-0 items-center rounded-control border-2 border-accent bg-surface-1 px-4 text-sm gap-2 font-semibold">
+                            <img src="./assets/exercises/filter-accent-soft.svg" alt="Filter icon" class="size-4">
+                            Filters · 1         
+                        </button>
+                        <button class="flex h-11 shrink-0 items-center gap-2 rounded-control bg-surface-2 px-4 text-sm font-semibold">Muscle ▾</button>
+                        <button class="flex h-11 shrink-0 items-center gap-2 rounded-control bg-surface-2 px-4 text-sm font-semibold">Equipment ▾</button>
+                        <button class="flex h-11 shrink-0 items-center gap-2 rounded-control bg-surface-2 px-4 text-sm font-semibold">Difficulty ▾</button>
+
+                    </div>
+
+                    <p class="font-semibold text-muted text-[12px] leading-[1.5]">24 results for "press"<span class="hidden lg:inline"> · results update as you type</span></p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </body>
+
+</html>
