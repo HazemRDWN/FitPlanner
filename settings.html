@@ -88,7 +88,7 @@
                         <div class="flex min-w-0 flex-1 flex-col gap-1">
 
                             <h2 class="font-display text-[18px] font-bold leading-[1.2]">Youssef A.</h2>
-                            <p class="font-mono text-muted text-[11px] leading-[1.3]">you@example.com<span class="hidden lg:inline"> · Member since Sep 2026</span></p>
+                            <p class="font-semibold text-muted text-[11px] leading-[1.3]">you@example.com<span class="hidden lg:inline"> · Member since Sep 2026</span></p>
                             <p class="flex items-center gap-1.5 text-[11px] font-semibold text-muted lg:hidden"><span class="size-1.5 rounded-full bg-warning"></span>48 workouts · best streak 21 d</p>
 
                         </div>
@@ -105,7 +105,64 @@
                                 <p class="font-display text-[20px] font-bold leading-[1]">21 d</p>
                             </div>
 
-                            <button class="flex min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Change photo</button>
+                            <button class="flex min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-xs font-semibold">Change photo</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col gap-3 lg:grid lg:grid-cols-12 lg:items-start lg:gap-5">
+
+                        <div class="flex flex-col gap-4 rounded-control bg-surface-1 p-4 lg:col-span-7 lg:p-5">
+
+                            <h2 class="font-display text-[16px] font-bold">
+                                <span class="lg:hidden">Details &amp; goals</span><span class="hidden lg:inline">Personal details &amp; goals</span>
+                            </h2>
+
+                            <div class="grid grid-cols-2 gap-3">
+
+                                <label class="col-span-2 flex flex-col gap-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">FULL NAME</span>
+                                    <input type="text" value="Youssef A." class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                </label>
+
+                                <label class="flex flex-col gap-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">HEIGHT (CM)</span>
+                                    <input type="number" value="180" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                </label>
+
+                                <label class="flex flex-col gap-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">WEIGHT (KG)</span>
+                                    <input type="number" value="78" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <span class="hidden font-mono text-muted text-[10px] lg:block">Used to estimate calories</span>
+                                </label>
+
+                                <label class="col-span-2 flex flex-col gap-1 lg:col-span-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">WEEKLY TARGET</span>
+                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                        <option selected>4 workouts</option>
+                                        <option>5 workouts</option>
+                                        <option>6 workouts</option>
+                                    </select>
+                                </label>
+
+                                <label class="hidden flex-col gap-1 lg:flex">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">MAIN GOAL</span>
+                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                        <option selected>Build muscle</option>
+                                        <option>Lose fat</option>
+                                        <option>Maintain</option>
+                                    </select>
+                                </label>
+
+                            </div>
+
+                            <div class="flex flex-row justify-end gap-3">
+
+                                <button class="hidden min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold lg:flex">Discard</button>
+                                <button class="flex min-h-14 w-full items-center justify-center rounded-control border-2 border-accent bg-surface-1 px-6 text-base font-semibold shadow-glow lg:min-h-11 lg:w-auto lg:text-sm">Save changes</button>
+
+                            </div>
 
                         </div>
 
