@@ -22,53 +22,55 @@
         </header>
 
         <main class="flex flex-col lg:flex-row">
-            <aside class="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
-                <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
-                    <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
-                    <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
-                    <span class="font-display text-[22px] font-bold">FITPLANNER</span>
-                </a>
-
-                <nav aria-label="Primary">
-                    <ul class="flex flex-col gap-2">
-                        <li>
-                            <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
-                                <img src="./assets/exercises/grid-muted.svg" alt="" class="size-6">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
-                                <img src="./assets/menu/search-muted.svg" alt="" class="size-6">
-                                Exercises
-                            </a>
-                        </li>
-                        <li>
-                            <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
-                                <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
-                                Routines
-                            </a>
-                        </li>
-                        <li>
-                            <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
-                                <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
-                                Workout
-                            </a>
-                        </li>
-                        <li>
-                            <a href="history.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold text-fg shadow-glow">
-                                <img src="./assets/history/history-accent-soft.svg" alt="" class="size-6">
-                                History
-                            </a>
-                        </li>
-                        <li>
-                            <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
-                                <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
-                                Profile & Settings
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            <aside class="sticky top-0 hidden h-screen w-[264px] justify-between shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+                <div>
+                    <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
+                        <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
+                        <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
+                        <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                    </a>
+    
+                    <nav aria-label="Primary">
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/grid-muted.svg" alt="" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/menu/search-muted.svg" alt="" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold text-fg shadow-glow">
+                                    <img src="./assets/history/history-accent-soft.svg" alt="" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
                     <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
                     Light mode
