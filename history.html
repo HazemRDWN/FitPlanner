@@ -6,14 +6,15 @@
         <title>History · FitPlanner</title>
         <link rel="stylesheet" href="./dist/output.css">
     </head>
-    <body>
+    <body class="has-[:target]:overflow-hidden">
+        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
         <header class="flex flex-row justify-between items-center px-5 py-6 lg:hidden">
             <a href="dashboard.html" class="flex items-center gap-3">
                 <img src="./assets/logo-mark.svg" alt="" class="size-9 rounded-chip shadow-glow light:hidden">
                 <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-9 light:block">
                 <span class="font-display text-[22px] font-bold">FITPLANNER</span>
             </a>
-            <a href="menu.html" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2">
+            <a href="#menu" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2">
                 <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
                 <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
                 <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
@@ -68,9 +69,8 @@
                         </li>
                     </ul>
                 </nav>
-                <label class="mt-auto flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg has-focus-visible:outline-2 has-focus-visible:outline-accent-soft">
-                    <input type="checkbox" role="switch" class="theme-toggle peer sr-only">
-                    <span class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform peer-checked:after:translate-x-5"></span>
+                <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                    <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
                     Light mode
                 </label>
             </aside>
@@ -393,6 +393,80 @@
                     <a href="#" class="flex min-h-14 items-center justify-center rounded-control border border-line bg-surface-1 font-semibold text-accent-soft lg:hidden">Load 7 more</a>
 
                 </div>
+            </div>
+            <div id="menu" class="fixed inset-0 z-50 hidden target:block lg:hidden">
+                <!-- dim background on the left: tapping it closes the menu -->
+                <a href="#" aria-label="Close menu" class="absolute inset-0 bg-bg/60"></a>
+
+                <nav aria-label="Mobile" class="absolute inset-y-0 right-0 flex w-[80%] flex-col justify-between gap-2 bg-surface-1 px-5 py-6">
+                    <div>
+                        <div class="mb-6 flex items-center justify-between">
+                            <p class="font-mono text-muted">MENU</p>
+                            <a href="#" aria-label="Close menu" class="flex size-12 items-center justify-center rounded-control bg-surface-2">
+                                <img src="./assets/menu/close-accent-soft.svg" alt="" class="size-6">
+                            </a>
+                        </div>
+
+                        <div class="flex flex-row justify-start items-center rounded-card bg-surface-2 p-5 gap-3">
+                            <div class="flex justify-center items-center bg-surface-1 border-2 border-accent rounded-control shadow-glow w-12 h-12">
+                                <p class="font-display font-bold">YA</p>
+                            </div>
+                            <div>
+                                <p class="font-body text-lg leading-[1.04]">Youssef A.</p>
+                                <p class="font-body text-sm text-muted">12-day streak</p>
+                            </div>
+                        </div>
+
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/grid-muted.svg" alt="" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/menu/search-muted.svg" alt="" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold text-fg shadow-glow">
+                                    <img src="./assets/history/history-accent-soft.svg" alt="" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                            Light mode
+                        </label>
+                        <div class="flex flex-col items-start justify-between">
+                            <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
+                            <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </main>
     </body>
