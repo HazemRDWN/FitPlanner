@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Push Day A · FitPlanner</title>
+    <link rel="stylesheet" href="./dist/output.css">
+  </head>
+  <body class="min-h-screen">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-chip focus:bg-surface-2 focus:p-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Skip to workout</a>
+    <div class="min-h-screen lg:flex">
+      <aside class="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+        <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+          <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
+          <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
+          <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul class="flex flex-col gap-2">
+            <li><a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                    <img src="./assets/exercises/grid-muted.svg" alt="" class="size-6">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                    <img src="./assets/dashboard/search-muted.svg" alt="" class="size-6">
+                    Exercises
+                </a>
+            </li>
+            <li>
+                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                    Routines
+                </a>
+            </li>
+            <li>
+                <a href="workout.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-3 border-accent bg-surface-2 px-4 text-lg text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                    Workout
+                </a>
+            </li>
+            <li>
+                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                    <img src="./assets/exercises/history-muted.svg" alt="" class="size-6">
+                    History
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                    <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                    Profile & Settings
+                </a>
+            </li>
+          </ul>
+        <label class="mt-auto flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg has-focus-visible:outline-2 has-focus-visible:outline-accent-soft">
+          <input type="checkbox" role="switch" class="theme-toggle peer sr-only">
+          <span class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform peer-checked:after:translate-x-5"></span>
+          Light mode
+        </label>
+        </nav>
+      </aside>
+
+      <main id="main" class="min-w-0 flex-1 px-4 pb-44 pt-7 min-[390px]:px-8 lg:px-10 lg:pb-10 lg:pt-8">
+        <header class="flex items-center justify-between gap-3">
+          <details class="relative lg:hidden">
+            <summary aria-label="Open navigation" class="flex size-12 cursor-pointer list-none items-center justify-center rounded-control bg-surface-2 text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <nav aria-label="Mobile primary" class="absolute left-0 top-14 z-30 w-60 rounded-control border border-line bg-surface-1 p-2 shadow-glow">
+              <a href="dashboard.html" class="flex min-h-11 items-center rounded-chip px-3 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Dashboard</a>
+              <a href="exercises.html" class="flex min-h-11 items-center rounded-chip px-3 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Exercises</a>
+              <a href="routine-builder.html" class="flex min-h-11 items-center rounded-chip px-3 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Routines</a>
+              <a href="workout.html" aria-current="page" class="flex min-h-11 items-center rounded-chip bg-surface-2 px-3 text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Workout</a>
+              <a href="history.html" class="flex min-h-11 items-center rounded-chip px-3 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">History</a>
+              <a href="settings.html" class="flex min-h-11 items-center rounded-chip px-3 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Profile &amp; Settings</a>
+            </nav>
+          </details>
+          <div class="flex flex-col items-center lg:flex-col-reverse lg:items-start lg:gap-1">
+            <h1 class="font-display text-lg font-bold lg:text-4xl">Push Day A</h1>
+            <p class="flex items-center gap-2 font-mono text-xs text-success lg:text-sm"><span aria-hidden="true" class="size-2.5 rounded-full bg-success lg:shadow-[0_0_8px_var(--success)]"></span><span class="hidden lg:inline">IN PROGRESS ·</span><span aria-label="Elapsed workout time: 24 minutes 18 seconds">24:18</span></p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button type="button" class="hidden min-h-13 items-center gap-3 rounded-control bg-surface-2 px-6 font-semibold hover:bg-line lg:flex focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"><span aria-hidden="true">Ⅱ</span>Pause</button>
+            <button type="button" class="min-h-12 rounded-control border-2 border-accent bg-surface-1 px-3 font-bold hover:bg-surface-2 lg:min-h-14 lg:px-6 lg:shadow-glow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Finish<span class="hidden lg:inline"> workout</span></button>
+          </div>
+        </header>
+
+        <section aria-label="Workout progress" class="mb-4 mt-5 lg:mb-6 lg:mt-7">
+          <div class="mb-1 flex justify-between text-sm text-muted lg:mb-2"><span>Progress</span><span>6 of 17 sets</span></div>
+          <div role="progressbar" aria-label="Sets completed" aria-valuemin="0" aria-valuemax="17" aria-valuenow="6" aria-valuetext="6 of 17 sets" class="h-2 overflow-hidden rounded-full bg-surface-2 lg:h-2.5"><div class="h-full w-[35.3%] rounded-full bg-accent shadow-glow"></div></div>
+        </section>
+
+        <div class="grid grid-cols-1 items-start gap-6 xl:grid-cols-3">
+          <section aria-labelledby="exercise-title" class="min-w-0 rounded-card border-2 border-accent bg-surface-1 p-4.5 shadow-glow lg:p-6 xl:col-span-2">
+            <div class="mb-3 flex items-center justify-between gap-3 lg:mb-5">
+              <div><p class="mb-1 font-mono text-xs text-accent-soft">EXERCISE 2 OF 5<span class="lg:hidden"> · PREV 24 KG × 10</span></p><h2 id="exercise-title" class="font-display text-[23px] font-bold leading-tight lg:text-[26px]">Incline Dumbbell Press</h2></div>
+              <details class="relative hidden shrink-0 lg:block"><summary class="flex min-h-11 cursor-pointer list-none items-center rounded-control bg-surface-2 px-4 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">How to</summary><p class="absolute right-0 top-13 z-10 w-64 rounded-control border border-line bg-surface-2 p-4 text-sm">Set the bench to an incline. Press the dumbbells above your chest, then lower slowly with control.</p></details>
+            </div>
+
+            <div class="hidden lg:block">
+              <table class="w-full border-separate border-spacing-y-2 text-left">
+                <caption class="sr-only">Incline dumbbell press sets, weight in kilograms and repetitions</caption>
+                <thead class="font-mono text-xs font-normal text-muted"><tr><th scope="col" class="px-3 font-normal">SET</th><th scope="col" class="px-3 font-normal">PREVIOUS</th><th scope="col" class="px-3 font-normal">KG</th><th scope="col" class="px-3 font-normal">REPS</th><th scope="col" class="px-3 text-center font-normal">DONE</th></tr></thead>
+                <tbody>
+                  <tr class="bg-surface-2"><th scope="row" class="px-3 text-muted">1</th><td class="px-3 text-muted">24 × 10</td><td class="px-3 font-semibold">26</td><td class="px-3 font-semibold">10</td><td class="px-3 text-center"><input aria-label="Set 1 completed" type="checkbox" checked class="my-0.5 size-12 cursor-pointer accent-success focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></td></tr>
+                  <tr class="bg-surface-2"><th scope="row" class="px-3 text-muted">2</th><td class="px-3 text-muted">24 × 9</td><td class="px-3 font-semibold">26</td><td class="px-3 font-semibold">9</td><td class="px-3 text-center"><input aria-label="Set 2 completed" type="checkbox" checked class="my-0.5 size-12 cursor-pointer accent-success focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></td></tr>
+                  <tr class="bg-surface-2 outline-2 outline-accent"><th scope="row" class="px-3 text-accent-soft">3</th><td class="px-3 text-muted">24 × 8</td><td class="px-3"><input aria-label="Set 3 weight in kilograms" type="number" min="0" step="0.5" value="26" class="min-h-11 w-20 rounded-control border border-accent bg-surface-1 px-2 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></td><td class="px-3"><input aria-label="Set 3 repetitions" type="number" min="0" step="1" placeholder="8" class="min-h-11 w-20 rounded-control border border-accent bg-surface-1 px-2 font-semibold placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></td><td class="px-3 text-center"><input aria-label="Mark set 3 completed" type="checkbox" class="my-0.5 size-12 cursor-pointer accent-success focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="space-y-2 lg:hidden">
+              <div class="flex min-h-20 items-center gap-4 rounded-control bg-surface-2 px-3"><span class="font-mono text-muted">SET 1</span><span class="text-lg font-semibold">26 kg × 10</span><input type="checkbox" checked aria-label="Set 1 completed" class="ml-auto size-15 shrink-0 cursor-pointer accent-success focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></div>
+              <div class="flex min-h-20 items-center gap-4 rounded-control bg-surface-2 px-3"><span class="font-mono text-muted">SET 2</span><span class="text-lg font-semibold">26 kg × 9</span><input type="checkbox" checked aria-label="Set 2 completed" class="ml-auto size-15 shrink-0 cursor-pointer accent-success focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></div>
+              <fieldset class="rounded-control border-2 border-accent bg-surface-2 p-3">
+                <legend class="sr-only">Current set 3</legend>
+                <div class="mb-3 flex items-center justify-between gap-2"><span class="font-mono text-sm text-accent-soft">SET 3 · NOW</span><span class="text-sm text-muted">Target 8–10</span></div>
+                <div class="flex items-end gap-2">
+                  <label class="min-w-0 flex-1"><span class="mb-1 block font-mono text-xs text-muted">KG</span><input aria-label="Set 3 weight in kilograms" type="number" min="0" step="0.5" value="26" class="h-14 w-full min-w-0 rounded-control bg-surface-1 px-3 text-center font-mono text-xl font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                  <label class="min-w-0 flex-1"><span class="mb-1 block font-mono text-xs text-muted">REPS</span><input aria-label="Set 3 repetitions" type="number" min="0" step="1" value="8" class="h-14 w-full min-w-0 rounded-control bg-surface-1 px-3 text-center font-mono text-xl font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft"></label>
+                  <input type="checkbox" aria-label="Mark set 3 completed" class="size-14 shrink-0 cursor-pointer accent-success focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
+                </div>
+              </fieldset>
+            </div>
+            <button type="button" class="mt-3 flex min-h-12 w-full items-center justify-center rounded-control border border-dashed border-line font-semibold text-accent-soft hover:bg-surface-2 lg:mt-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">+ Add set</button>
+          </section>
+
+          <div class="contents lg:flex lg:flex-col lg:gap-6">
+            <section aria-labelledby="rest-title" class="fixed inset-x-3 bottom-6 z-20 flex items-center gap-2 rounded-card border-2 border-accent bg-surface-1 p-3 shadow-glow min-[390px]:inset-x-6 min-[390px]:gap-4 min-[390px]:p-4 lg:static lg:block lg:border-0 lg:p-6 lg:shadow-none">
+              <h2 id="rest-title" class="hidden font-display text-[22px] font-bold lg:block">Rest timer</h2>
+              <div class="relative size-[60px] shrink-0 lg:mx-auto lg:my-6 lg:size-44">
+                <svg aria-hidden="true" viewBox="0 0 120 120" class="size-full -rotate-90 fill-none stroke-[8]"><circle cx="60" cy="60" r="54" class="stroke-surface-2"/><circle cx="60" cy="60" r="54" stroke-dasharray="271 340" stroke-linecap="round" class="stroke-accent"/></svg>
+                <div class="absolute inset-0 hidden flex-col items-center justify-center lg:flex"><span role="timer" aria-label="Rest remaining: 1 minute 12 seconds" class="font-mono text-[42px] leading-tight">01:12</span><span class="text-sm text-muted">of 01:30</span></div>
+              </div>
+              <div class="min-w-0 flex-1 lg:hidden"><p class="font-mono text-xs text-muted">REST</p><span role="timer" aria-label="Rest remaining: 1 minute 12 seconds" class="font-mono text-[30px] leading-tight">01:12</span></div>
+              <div class="flex gap-3 lg:grid lg:grid-cols-3 lg:gap-2"><button type="button" aria-label="Subtract 15 seconds of rest" class="hidden min-h-13 rounded-control bg-surface-2 px-3 hover:bg-line lg:block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">−15s</button><button type="button" aria-label="Add 15 seconds of rest" class="min-h-13 rounded-control bg-surface-2 px-3 hover:bg-line focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">+15<span class="hidden lg:inline">s</span></button><button type="button" class="min-h-13 rounded-control border-2 border-accent px-3 font-bold hover:bg-surface-2 lg:px-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Skip</button></div>
+            </section>
+
+            <section aria-labelledby="queue-title" class="-mt-1 lg:mt-0 lg:rounded-card lg:bg-surface-1 lg:p-6">
+              <h2 id="queue-title" class="mb-2 font-display text-xl font-bold lg:mb-3 lg:text-[22px]"><span class="lg:hidden">Up next</span><span class="hidden lg:inline">Exercises</span></h2>
+              <ol class="flex flex-col gap-2 text-sm">
+                <li class="order-last flex min-h-[54px] items-center gap-3 rounded-control border border-line px-3 lg:order-none lg:min-h-11 lg:rounded-chip lg:border-0 lg:bg-surface-2"><span aria-hidden="true" class="text-lg font-bold text-success">✓</span><span class="text-muted line-through">Barbell Bench Press</span><span class="ml-auto text-muted"><span class="lg:hidden">Done</span><span class="hidden lg:inline">4/4</span></span></li>
+                <li aria-current="step" class="hidden min-h-11 items-center gap-3 rounded-chip border-2 border-accent bg-surface-2 px-3 font-semibold lg:flex"><span aria-hidden="true" class="size-[18px] rounded-full border-[3px] border-accent-soft"></span><span>Incline Dumbbell Press</span><span class="ml-auto text-muted">2/3</span></li>
+                <li class="flex min-h-[52px] items-center gap-3 rounded-control bg-surface-2 px-3 lg:min-h-11 lg:rounded-chip"><span class="text-base text-muted lg:hidden">3</span><span aria-hidden="true" class="hidden size-[18px] rounded-full border-2 border-line lg:block"></span><span>Overhead Press</span><span class="ml-auto shrink-0 text-muted"><span class="lg:hidden">4 × 6–8</span><span class="hidden lg:inline">0/4</span></span></li>
+                <li class="flex min-h-[52px] items-center gap-3 rounded-control bg-surface-2 px-3 lg:min-h-11 lg:rounded-chip"><span class="text-base text-muted lg:hidden">4</span><span aria-hidden="true" class="hidden size-[18px] rounded-full border-2 border-line lg:block"></span><span>Machine Chest Press</span><span class="ml-auto shrink-0 text-muted"><span class="lg:hidden">3 × 10–12</span><span class="hidden lg:inline">0/3</span></span></li>
+                <li class="flex min-h-[52px] items-center gap-3 rounded-control bg-surface-2 px-3 lg:min-h-11 lg:rounded-chip"><span class="text-base text-muted lg:hidden">5</span><span aria-hidden="true" class="hidden size-[18px] rounded-full border-2 border-line lg:block"></span><span>Tricep Rope Pushdown</span><span class="ml-auto shrink-0 text-muted"><span class="lg:hidden">3 × 12–15</span><span class="hidden lg:inline">0/3</span></span></li>
+              </ol>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

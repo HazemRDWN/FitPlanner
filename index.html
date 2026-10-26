@@ -6,9 +6,10 @@
         <title>Home · FitPlanner</title>
         <link rel="stylesheet" href="./dist/output.css">
     </head>
-    <body class="flex flex-col bg-bg">
+    <body class="flex flex-col bg-bg has-[:target]:overflow-hidden">
+        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
         <div class="lg:px-20">
-            <header class="border-b border-surface-1">
+            <header class="border-surface-1">
                 <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
                     <a href="index.html" class="flex items-center gap-3">
                         <img src="./assets/logo-mark.svg" alt="" class="size-9 rounded-chip shadow-glow light:hidden">
@@ -25,9 +26,13 @@
                     <div class="hidden gap-3 lg:flex">
                         <a href="login.html" class="flex min-h-12 items-center rounded-control border border-line px-5 font-semibold">Log in</a>
                         <a href="register.html" class="flex min-h-12 items-center rounded-control border-2 border-accent bg-surface-1 px-5 font-bold shadow-glow">Get started</a>
+                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                            Light mode
+                        </label>
                     </div>
 
-                    <a href="menu.html" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
+                    <a href="#menu" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
                         <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
                         <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
                         <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
@@ -40,14 +45,14 @@
                 <div>
                     <div class="flex flex-col gap-5 mb-5 lg:flex-1 lg:gap-6">
                         <p class="font-mono text-sm text-accent-soft col">FITNESS & WORKOUT PLANNER</p>
-                        <h1 class="font-display text-[42px] font-bold leading-[1.04] lg:text-[64] lg:max-w-[350px]">Plan it. Log it. See it add up.</h1>
+                        <h1 id="hero-title" class="font-display text-[42px] font-bold leading-[1.04] lg:text-[64px] lg:max-w-[450px]">Plan it. Log it. See it add up.</h1>
                         <p class="max-w-[520px] text-lg text-muted lg:text-xl">
                             Build custom routines from a full exercise library, log every set with a built-in rest timer, and watch your streak, volume and calories grow on one dashboard.
                         </p>
                     </div>
                     <div class="flex flex-col gap-3 lg:flex-row lg:gap-4">
-                        <a href="login.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow lg:hidden">Create free account</a>
-                        <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold lg:hidden">Browse exercises</a>
+                        <a href="register.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow">Create free account</a>
+                        <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold">Browse exercises</a>
                     </div>
                 </div>
                 <div aria-hidden="true" class="flex flex-col gap-3 mb-7 rounded-card border border-accent bg-surface-1 p-4 shadow-glow lg:flex-1 lg:gap-4 lg:p-6">
@@ -86,7 +91,7 @@
                 </div>
             </section>
             <section aria-labelledby="features-title" id="features" class="mx-auto flex max-w-[1200px] flex-col">
-                <h1 class="font-display text-[30px] font-bold leading-[1.04] mb-5 lg:text-[40]">Everything for your training, in one place</h1>
+                <h2 id="features-title" class="font-display text-[30px] font-bold leading-[1.04] mb-5 lg:text-[40px]">Everything for your training, in one place</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div class="flex flex-row justify-start rounded-control bg-surface-1 p-5 gap-3 lg:flex-col">
                         <div>
@@ -132,7 +137,7 @@
             </section>
 
             <section aria-labelledby="how-title" id="how" class="mx-auto flex max-w-[1200px] flex-col lg:mt-15">
-                <h1 class="font-display text-[30px] font-bold leading-[1.04] my-5 lg:text-[40]">How it works</h1>
+                <h2 id="how-title" class="font-display text-[30px] font-bold leading-[1.04] my-5 lg:text-[40px]">How it works</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     <div class="flex flex-row justify-start rounded-control border-1 border-line p-5 gap-3 lg:flex-col">
                         <div>
@@ -168,13 +173,43 @@
             </section>
             <section aria-labelledby="started-title" class="flex flex-col mx-auto max-w-[1200px] items-center rounded-control bg-surface-1 border-2 border-accent shadow-glow p-4 my-10 lg:flex-row lg:justify-between lg:p-8">
                 <div class="w-full">
-                    <h1 class="font-display font-bold text-2xl lg:w-full">Ready for your next session?</h1>
+                    <h2 id="started-title" class="font-display font-bold text-2xl lg:w-full">Ready for your next session?</h2>
                     <p class="font-body text-sm text-muted mt-2 lg:mt-0">Free. Your data stays on your device.</p>
                 </div>
                 <div class="flex flex-col justify-center items-end w-full mt-3 lg:mt-0">
                     <a href="register.html" class="flex flex-row items-center justify-center font-bold text-lg rounded-control bg-surface-2 border-2 border-accent min-h-14 w-full lg:max-w-[200px]">Get Started</a>
                 </div>
             </section>
+            <nav id="menu" aria-label="Mobile" class="fixed inset-0 z-50 hidden flex-col justify-between gap-2 bg-bg px-5 py-6 target:flex lg:hidden">
+                <div>
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="./assets/logo-mark.svg" alt="" class="size-9 rounded-chip shadow-glow light:hidden">
+                            <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-9 light:block">
+                            <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                        </div>
+                        <a href="#" aria-label="Close menu" class="flex size-12 items-center justify-center rounded-control bg-surface-2">
+                            <img src="./assets/menu/close-accent-soft.svg" alt="" class="size-6">
+                        </a>
+                    </div>
+    
+                    <div class="flex flex-col gap-4">
+                        <a href="register.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow">Create free account</a>
+                        <a href="login.html" class="flex min-h-16 items-center justify-center rounded-control bg-surface-1 px-7 text-xl font-semibold border-accent border-2 shadow-glow">Sign In</a>
+                        <a href="exercises.html" class="flex min-h-14 items-center justify-center rounded-control bg-surface-2 px-7 text-lg font-semibold">Browse exercises</a>
+                    </div>
+                </div>
+                <div>
+                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                        Light mode
+                    </label>
+                    <div class="flex flex-col items-start justify-between">
+                        <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
+                        <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
+                    </div>
+                </div>
+            </nav>
         </main>
         <footer class="border-t border-surface-1">
             <div class="mx-auto flex max-w-[1200px] flex-col items-start justify-between px-5 py-6 lg:px-6 lg:flex-row lg:items-center">
