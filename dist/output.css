@@ -243,6 +243,9 @@
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
+  .mt-0 {
+    margin-top: 0px;
+  }
   .mt-1 {
     margin-top: var(--spacing);
   }
