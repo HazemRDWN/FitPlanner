@@ -513,6 +513,9 @@
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
@@ -630,6 +633,9 @@
   .border-accent {
     border-color: var(--accent);
   }
+  .border-accent-soft {
+    border-color: var(--accent-soft);
+  }
   .border-line {
     border-color: var(--line);
   }
@@ -659,6 +665,9 @@
   }
   .bg-bg {
     background-color: var(--bg);
+  }
+  .bg-fg {
+    background-color: var(--fg);
   }
   .bg-info {
     background-color: var(--info);
@@ -981,6 +990,10 @@
     .lg\:size-10 {
       width: calc(var(--spacing) * 10);
       height: calc(var(--spacing) * 10);
+    }
+    .lg\:size-12 {
+      width: calc(var(--spacing) * 12);
+      height: calc(var(--spacing) * 12);
     }
     .lg\:h-12 {
       height: calc(var(--spacing) * 12);
