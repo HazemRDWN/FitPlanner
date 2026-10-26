@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile & Settings · FitPlanner</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <script src="./js/theme.js"></script>
+</head>
+
+<body class="has-[:target]:overflow-hidden"> 
+    <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
+    <header class="lg:hidden">
+        <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="./assets/logo-mark.svg" alt="FitPlanner Logo" class="size-9 rounded-chip shadow-glow light:hidden">
+                <img src="./assets/logo-mark-light.svg" alt="FitPlanner Logo" class="hidden size-9 light:block">
+                <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+            </a>
+
+            <a href="#menu" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
+                 <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                  <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+            </a>
+        </nav>
+        
+    </header>
+
+        <main class="flex flex-row">
+
+            <aside class="sticky top-0 hidden justify-between h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+                <div>
+                    <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
+                        <img src="./assets/logo-mark.svg" alt="FitPlanner logo" class="size-10 rounded-chip shadow-glow light:hidden">
+                        <img src="./assets/logo-mark-light.svg" alt="FitPlanner logo" class="hidden size-10 light:block">
+                        <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                    </a>
+    
+                    <nav aria-label="Primary">
+                        <ul class="flex flex-col gap-2">
+                            <li><a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/settings/grid-muted.svg" alt="Grid icon" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/dashboard/search-muted.svg" alt="Magnifier icon" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="List icon" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="Timer icon" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/history-muted.svg" alt="Clock rewinding icon" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg text-fg">
+                                    <img src="./assets/settings/user-accent-soft.svg" alt="User outline icon" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                        Light mode
+                    </label>
+                </div>
+            </aside>
+
+            <div class="mx-auto flex w-full min-w-0 flex-col px-4 pb-6 pt-0 lg:px-8 lg:pt-8">
+                
+                <h1 class="font-display text-[30px] font-bold leading-[1.04] lg:text-[36px]">Profile &amp; Settings</h1>
+
+                <div class="mt-5 flex flex-col gap-3 lg:gap-5">
+
+                    <div class="flex flex-row items-center gap-4 rounded-control bg-surface-1 p-4 lg:p-5">
+
+                        <div class="flex size-14 shrink-0 items-center justify-center rounded-control p-3 px-4 border-2 border-accent bg-surface-2 font-display text-lg font-bold shadow-glow lg:size-16 lg:text-xl">YA</div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1">
+
+                            <h2 class="font-display text-[18px] font-bold leading-[1.2]">Youssef A.</h2>
+                            <p class="font-semibold text-muted text-[11px] leading-[1.3]">you@example.com<span class="hidden lg:inline"> · Member since Sep 2026</span></p>
+                            <p class="flex items-center gap-1.5 text-[11px] font-semibold text-muted lg:hidden"><span class="size-1.5 rounded-full bg-warning"></span>48 workouts · best streak 21 d</p>
+
+                        </div>
+
+                        <div class="hidden flex-row items-center gap-6 lg:flex">
+
+                            <div class="flex flex-col gap-1">
+                                <p class="font-mono text-muted text-[10px] tracking-[2px]">WORKOUTS</p>
+                                <p class="font-display text-[20px] font-bold leading-[1]">48</p>
+                            </div>
+
+                            <div class="flex flex-col gap-1">
+                                <p class="font-mono text-muted text-[10px] tracking-[2px]">BEST STREAK</p>
+                                <p class="font-display text-[20px] font-bold leading-[1]">21 d</p>
+                            </div>
+
+                            <button class="flex min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-xs font-semibold">Change photo</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col gap-3 lg:grid lg:grid-cols-12 lg:items-start lg:gap-5">
+
+                        <div class="flex flex-col gap-4 rounded-control bg-surface-1 p-4 lg:col-span-7 lg:p-5">
+
+                            <h2 class="font-display text-[16px] font-bold">
+                                <span class="lg:hidden">Details &amp; goals</span><span class="hidden lg:inline">Personal details &amp; goals</span>
+                            </h2>
+
+                            <div class="grid grid-cols-2 gap-3">
+
+                                <label class="col-span-2 flex flex-col gap-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">FULL NAME</span>
+                                    <input type="text" value="Youssef A." class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                </label>
+
+                                <label class="flex flex-col gap-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">HEIGHT (CM)</span>
+                                    <input type="number" value="180" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                </label>
+
+                                <label class="flex flex-col gap-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">WEIGHT (KG)</span>
+                                    <input type="number" value="78" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <span class="hidden font-mono text-muted text-[10px] lg:block">Used to estimate calories</span>
+                                </label>
+
+                                <label class="col-span-2 flex flex-col gap-1 lg:col-span-1">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">WEEKLY TARGET</span>
+                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                        <option selected>4 workouts</option>
+                                        <option>5 workouts</option>
+                                        <option>6 workouts</option>
+                                    </select>
+                                </label>
+
+                                <label class="hidden flex-col gap-1 lg:flex">
+                                    <span class="font-mono text-muted text-[10px] tracking-[2px]">MAIN GOAL</span>
+                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                        <option selected>Build muscle</option>
+                                        <option>Lose fat</option>
+                                        <option>Maintain</option>
+                                    </select>
+                                </label>
+
+                            </div>
+
+                            <div class="flex flex-row justify-end gap-3">
+
+                                <button class="hidden min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold lg:flex">Discard</button>
+                                <button class="flex min-h-14 w-full items-center justify-center rounded-control border-2 border-accent bg-surface-1 px-6 text-base font-semibold shadow-glow lg:min-h-11 lg:w-auto lg:text-sm">Save changes</button>
+
+                            </div>
+
+                        </div>
+                        
+                        <div class="flex flex-col gap-3 lg:col-span-5 lg:gap-5">
+
+                            <div class="flex flex-col rounded-control bg-surface-1 p-4 lg:p-5">
+
+                                <h2 class="font-display text-[16px] font-bold">Preferences</h2>
+
+                                <div class="mt-3 flex flex-row items-center justify-between gap-3 pb-3">
+
+                                    <div class="flex flex-col gap-1">
+                                        <p class="text-sm font-semibold">Dark mode</p>
+                                        <p class="font-semibold text-muted text-[10px]"><span class="lg:hidden">Saves battery on OLED</span><span class="hidden lg:inline">Pure black saves battery on OLED screens</span></p>
+                                    </div>
+
+                                    <button role="switch" aria-checked="true" aria-label="Dark mode" class="flex h-7 w-12 shrink-0 items-center justify-end rounded-full border-2 border-accent bg-surface-2 px-1">
+                                        <span class="size-4 rounded-full shadow-glow bg-accent-soft"></span>
+                                    </button>
+
+                                </div>
+
+                                <div class="flex flex-row items-center justify-between gap-3 border-t border-line py-3">
+
+                                    <p class="text-sm font-semibold">Units</p>
+
+                                    <div class="flex items-center gap-0 rounded-xl bg-surface-2 p-1">
+                                        <button class="flex h-9 items-center justify-center rounded-lg border-2 border-accent bg-surface-1 px-3 text-xs font-semibold"><span class="lg:hidden">kg</span><span class="hidden lg:inline">kg / cm</span></button>
+                                        <button class="flex h-9 items-center justify-center rounded-lg px-3 text-xs font-semibold text-muted"><span class="lg:hidden">lb</span><span class="hidden lg:inline">lb / in</span></button>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex flex-row items-center justify-between gap-3 border-t border-line py-3">
+
+                                    <p class="text-sm font-semibold"><span class="lg:hidden">Default rest</span><span class="hidden lg:inline">Default rest timer</span></p>
+
+                                    <select aria-label="Default rest timer" class="h-9 rounded-control bg-surface-2 px-3 text-xs text-fg outline-none">
+                                        <option>60 s</option>
+                                        <option>75 s</option>
+                                        <option selected>90 s</option>
+                                        <option>120 s</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="flex flex-row items-center justify-between gap-3 border-t border-line pt-3">
+
+                                    <div class="flex flex-col gap-1">
+                                        <p class="text-sm font-semibold">Vibrate when rest ends</p>
+                                        <p class="hidden font-semibold text-muted text-[11px] lg:block">On supported phones</p>
+                                    </div>
+
+                                    <button role="switch" aria-checked="false" aria-label="Vibrate when rest ends" class="flex h-7 w-12 shrink-0 items-center justify-start rounded-full border-2 border-1 border-line bg-surface-2 px-1">
+                                        <span class="size-4 rounded-full bg-muted"></span>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex flex-col gap-3 rounded-control bg-surface-1 p-4 lg:p-5">
+
+                                <h2 class="font-display text-[16px] font-bold">Data & account</h2>
+
+                                <div class="flex flex-col gap-3 lg:hidden">
+
+                                    <button class="flex min-h-12 items-center justify-between rounded-control bg-surface-2 px-4 text-sm font-semibold">
+                                        Export data (CSV / JSON)
+                                        <span class="text-muted">></span>
+                                    </button>
+
+                                    <button class="flex min-h-12 items-center justify-between rounded-control bg-surface-2 px-4 text-sm font-semibold">
+                                        Change password
+                                        <span class="text-muted">></span>
+                                    </button>
+
+                                    <button class="flex min-h-12 items-center justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Log out</button>
+
+                                    <button class="flex min-h-12 items-center justify-center rounded-control border-1 border-error bg-surface-1 px-4 text-sm font-semibold text-error">Clear all local data…</button>
+
+                                </div>
+
+                                <div class="hidden flex-col gap-4 lg:flex">
+
+                                    <p class="font-mono text-muted text-[12px] leading-[1.4]">Routines and history are stored in this browser.</p>
+
+                                    <div class="flex flex-row flex-wrap gap-2">
+                                        <button class="flex min-h-10 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Export data</button>
+                                        <button class="flex min-h-10 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Change password</button>
+                                        <button class="flex min-h-10 items-center justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Log out</button>
+                                    </div>
+
+                                    <button class="flex min-h-10 w-fit items-center justify-center rounded-control border-1 border-error bg-surface-1 px-4 text-sm font-semibold text-error">Clear all local data…</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+            <div id="menu" class="fixed inset-0 z-50 hidden target:block lg:hidden">
+                <a href="#" aria-label="Close menu" class="absolute inset-0 bg-bg/60"></a>
+
+                <nav aria-label="Mobile" class="absolute inset-y-0 right-0 flex w-[80%] flex-col justify-between gap-2 bg-surface-1 px-5 py-6">
+                    <div>
+                        <div class="mb-6 flex items-center justify-between">
+                            <p class="font-mono text-muted">MENU</p>
+                            <a href="#" aria-label="Close menu" class="flex size-12 items-center justify-center rounded-control bg-surface-2">
+                                <img src="./assets/menu/close-accent-soft.svg" alt="" class="size-6">
+                            </a>
+                        </div>
+
+                        <div class="flex flex-row justify-start items-center rounded-card bg-surface-2 p-5 gap-3">
+                            <div class="flex justify-center items-center bg-surface-1 border-2 border-accent rounded-control shadow-glow w-12 h-12">
+                                <p class="font-display font-bold">YA</p>
+                            </div>
+                            <div>
+                                <p class="font-body text-lg leading-[1.04]">Youssef A.</p>
+                                <p class="font-body text-sm text-muted">12-day streak</p>
+                            </div>
+                        </div>
+
+                        <ul class="flex flex-col gap-2 mt-3">
+                            <li>
+                                <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercise-detail/grid-muted.svg" alt="" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/dashboard/search-muted.svg" alt="" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/dashboard/history-muted.svg" alt="" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold text-fg shadow-glow">
+                                    <img src="./assets/settings/user-accent-soft.svg" alt="" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                            Light mode
+                        </label>
+                        <div class="flex flex-col items-start justify-between">
+                            <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
+                            <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </main>
+
+</body>
+
+</html

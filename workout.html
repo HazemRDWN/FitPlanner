@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./dist/output.css">
     <script src="./js/theme.js"></script>
   </head>
-  <body class="min-h-screen">
+  <body class="min-h-screen has-[:target]:overflow-hidden">
+    <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-chip focus:bg-surface-2 focus:p-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">Skip to workout</a>
     <div class="min-h-screen lg:flex">
       <aside class="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
@@ -37,8 +38,8 @@
                 </a>
             </li>
             <li>
-                <a href="workout.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-3 border-accent bg-surface-2 px-4 text-lg text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft">
-                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                <a href="workout.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-3 border-accent bg-surface-2 px-4 text-lg text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-soft font-bold shadow-glow">
+                    <img src="./assets/home/timer-accent-soft.svg" alt="" class="size-6">
                     Workout
                 </a>
             </li>
@@ -55,12 +56,12 @@
                 </a>
             </li>
           </ul>
+        </nav>
         <label class="mt-auto flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg has-focus-visible:outline-2 has-focus-visible:outline-accent-soft">
           <input type="checkbox" role="switch" class="theme-toggle peer sr-only">
           <span class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform peer-checked:after:translate-x-5"></span>
           Light mode
         </label>
-        </nav>
       </aside>
 
       <main id="main" class="min-w-0 flex-1 px-4 pb-44 pt-7 min-[390px]:px-8 lg:px-10 lg:pb-10 lg:pt-8">

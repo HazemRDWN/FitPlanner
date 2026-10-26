@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exercise Library · FitPlanner</title>
+        <link rel="stylesheet" href="./dist/output.css">
+        <script src="./js/theme.js"></script>
+    </head>
+
+    <body class="has-[:target]:overflow-hidden">
+        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
+        <header class="lg:hidden">
+            <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="./assets/logo-mark.svg" alt="FitPlanner Logo" class="size-9 rounded-chip shadow-glow light:hidden">
+                    <img src="./assets/logo-mark-light.svg" alt="FitPlanner Logo" class="hidden size-9 light:block">
+                    <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                </a>
+
+                <a href="#menu" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="flex flex-row">
+
+            <aside class="sticky top-0 hidden h-screen w-[264px] justify-between shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+                <div>
+
+                    <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
+                        <img src="./assets/logo-mark.svg" alt="" class="size-10 rounded-chip shadow-glow light:hidden">
+                        <img src="./assets/logo-mark-light.svg" alt="" class="hidden size-10 light:block">
+                        <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                    </a>
+    
+                    <nav aria-label="Primary">
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/settings/grid-muted.svg" alt="" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg text-fg font-bold shadow-glow">
+                                    <img src="./assets/exercises/search-accent-soft.svg" alt="" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/history-muted.svg" alt="" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                        Light mode
+                    </label>
+                </div>
+            </aside>
+
+            <div class="mx-auto flex w-full min-w-0 flex-col px-4 pb-6 pt-0 lg:px-8 lg:pt-8">
+
+                <div class="flex flex-row items-start justify-between gap-4">
+
+                    <div class="flex flex-col">
+
+                        <h1 class="font-display text-[30px] font-bold leading-[1.04] lg:text-[36px]">Exercise Library</h1>
+                        <p class="hidden font-semibold text-muted text-[12px] leading-[2] lg:block">Browse, filter and quick-add exercises to your routines.</p>
+
+                    </div>
+
+                    <a href="routine-builder.html" class="hidden min-h-12 items-center gap-3 rounded-control bg-surface-2 px-4 text-sm font-semibold lg:flex">
+                        <span class="flex text-accent-soft size-6 items-center justify-center rounded-lg border-1 border-accent-soft bg-surface-1 text-[12px]">3</span>
+                        Exercises in Push Day A
+                    </a>
+
+                </div>
+
+                <div class="mt-5 flex flex-col gap-3 lg:rounded-control lg:bg-surface-1 lg:p-5">
+
+                    <div class="flex h-14 items-center gap-3 rounded-control border-2 border-accent bg-surface-2 px-2 shadow-glow lg:h-12 lg:bg-surface-2">
+
+                        <img src="assets/exercises/search-accent-soft.svg" alt="Magnifier icon" class="size-5">
+                        <input type="search" value="press" aria-label="Search exercises" class="w-full bg-transparent text-sm text-fg outline-none placeholder:text-muted">
+                        <button aria-label="Clear search" class="flex size-11 shrink-0 items-center justify-center rounded-control bg-surface-1 text-sm text-muted lg:bg-surface-1">
+
+                            <img src="assets/exercises/close-muted.svg" alt="Magnifier icon" class="size-5">
+
+                        </button>
+
+                    </div>
+
+                    <div class="flex flex-row gap-2 overflow-x-auto lg:hidden">
+
+                        <button class="flex h-11 shrink-0 items-center rounded-control border-2 border-accent bg-surface-1 px-4 text-sm gap-2 font-semibold">
+                            <img src="./assets/exercises/filter-accent-soft.svg" alt="Filter icon" class="size-4">
+                            Filters · 1         
+                        </button>
+                        <button class="flex h-11 shrink-0 items-center gap-2 rounded-control bg-surface-2 px-4 text-sm font-semibold">Muscle ▾</button>
+                        <button class="flex h-11 shrink-0 items-center gap-2 rounded-control bg-surface-2 px-4 text-sm font-semibold">Equipment ▾</button>
+                        <button class="flex h-11 shrink-0 items-center gap-2 rounded-control bg-surface-2 px-4 text-sm font-semibold">Difficulty ▾</button>
+
+                    </div>
+
+                    <p class="font-semibold text-muted text-[12px] leading-[1.5]">24 results for "press"<span class="hidden lg:inline"> · results update as you type</span></p>
+
+                    <div class="hidden grid-cols-4 items-end gap-3 lg:grid">
+
+                        <label class="flex flex-col gap-1">
+                            <span class="font-mono text-muted text-[10px] tracking-[2px]">MUSCLE GROUP</span>
+                            <select class="h-11 rounded-control just bg-surface-2 px-3 text-sm text-fg outline-none">
+                                <option>All muscles</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Legs</option>
+                                <option>Shoulders</option>
+                                <option>Triceps</option>
+                            </select>
+                        </label>
+
+                        <label class="flex flex-col gap-1">
+                            <span class="font-mono text-muted text-[10px] tracking-[2px]">EQUIPMENT</span>
+                            <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                <option>All equipment</option>
+                                <option>Barbell</option>
+                                <option>Dumbbell</option>
+                                <option>Machine</option>
+                            </select>
+                        </label>
+
+                        <label class="flex flex-col gap-1">
+                            <span class="font-mono text-muted text-[10px] tracking-[2px]">DIFFICULTY</span>
+                            <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                <option>All levels</option>
+                                <option>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </label>
+
+                        <button class="flex h-11 items-center text-accent justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Reset filters</button>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-5 flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-5 lg:items-stretch">
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12 ">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Barbell Bench Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Chest · Barbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control bg-surface-1 px-4 text-sm font-semibold border-1 border-line text-success">
+
+                                    <img src="assets/exercises/check-success.svg" alt="Dumbbell icon" class="size-6 lg:size-6">
+
+                                    Added
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Barbell Bench Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-1 border-line bg-surface-1 text-lg font-semibold text-success lg:hidden">
+                            
+                            <img src="assets/exercises/check-success.svg" alt="Dumbbell icon" class="size-5 lg:size-8">
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Incline Dumbbell Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Chest · Dumbbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control bg-surface-1 px-4 text-sm font-semibold border-1 border-line text-success">
+
+                                    <img src="assets/exercises/check-success.svg" alt="Dumbbell icon" class="size-6 lg:size-6">
+
+                                    Added
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Incline Dumbbell Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-1 border-line bg-surface-1 text-lg font-semibold text-success lg:hidden">
+                            
+                            <img src="assets/exercises/check-success.svg" alt="Dumbbell icon" class="size-5 lg:size-8">
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Overhead Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Shoulders · Barbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control border-2 bg-surface-1 px-4 text-sm border-2 border-accent shadow-glow font-semibold">
+
+                                    + Add
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Barbell Bench Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-xl font-semibold shadow-glow lg:hidden">
+                            
+                            +
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Leg Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Legs · Machine</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-info"></span>Beginner</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-info"></span>Beginner</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control border-2 bg-surface-1 px-4 text-sm border-2 border-accent shadow-glow font-semibold">
+
+                                    + Add
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Leg Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-xl font-semibold shadow-glow lg:hidden">
+                            
+                            +
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Push Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Shoulders · Barbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-accent"></span>Advanced</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-accent"></span>Adavnced</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control border-2 bg-surface-1 px-4 text-sm border-2 border-accent shadow-glow font-semibold">
+
+                                    + Add
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Push Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-xl font-semibold shadow-glow lg:hidden">
+                            
+                            +
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Machine Chest Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Chest · Machine</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-info"></span>Beginner</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-info"></span>Beginner</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control bg-surface-1 px-4 text-sm font-semibold border-1 border-line text-success">
+
+                                    <img src="assets/exercises/check-success.svg" alt="Dumbbell icon" class="size-6 lg:size-6">
+
+                                    Added
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Machine Chest Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-1 border-line bg-surface-1 text-lg font-semibold text-success lg:hidden">
+                            
+                            <img src="assets/exercises/check-success.svg" alt="Dumbbell icon" class="size-5 lg:size-8">
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Arnold Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Shoulders · Dumbbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control border-2 bg-surface-1 px-4 text-sm border-2 border-accent shadow-glow font-semibold">
+
+                                    + Add
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Arnold Press added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-xl font-semibold shadow-glow lg:hidden">
+                            
+                            +
+
+                        </button>
+
+                    </article>
+
+                    <article class="flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Close-Grip Bench Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Triceps · Barbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-success"></span>Intermediate</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control border-2 bg-surface-1 px-4 text-sm border-2 border-accent shadow-glow font-semibold">
+
+                                    + Add
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Close-Grip Bench added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-xl font-semibold shadow-glow lg:hidden">
+                            
+                            +
+
+                        </button>
+
+                    </article>
+
+                    <article class="hidden flex items-center gap-3 rounded-control bg-surface-2 p-3 lg:flex-col lg:items-stretch lg:gap-0 lg:overflow-hidden lg:p-0 lg:flex">
+
+                        <div class="relative flex size-16 shrink-0 items-center justify-center rounded-control bg-surface-1 lg:h-66 lg:w-full lg:rounded-none">
+                            <p class="absolute left-2 top-2 hidden rounded bg-bg px-1.5 font-mono text-muted text-[9px] leading-[1.5] lg:block">DEMO GIF</p>
+                            <p class="absolute left-2 top-12 rounded bg font-mono text-muted text-[8px] lg:hidden">GIF</p>
+                            <img src="assets/exercises/dumbbell-line.svg" alt="Dumbbell icon" class="size-6 lg:size-12">
+                        </div>
+
+                        <div class="flex min-w-0 flex-1 flex-col gap-1 lg:w-full lg:flex-none lg:gap-3 lg:p-4">
+
+                            <div class="flex flex-row items-start justify-between gap-2">
+
+                                <div class="flex flex-col gap-1">
+                                    <h2 class="font-display text-[18px] font-bold leading-[1.3] lg:text-[16px]">Dumbbell Floor Press</h2>
+                                    <p class="font-semibold text-muted text-[12px] leading-[1.2]">Chest · Dumbbell</p>
+                                    <p class="flex items-center gap-1.5 text-[11px] font-semibold lg:hidden"><span class="size-1.5 rounded-full bg-info"></span>Beginner</p>
+                                </div>
+
+                                <p class="hidden shrink-0 items-center gap-1.5 rounded-chip bg-surface-1 px-2 py-1 text-[11px] font-semibold lg:flex"><span class="size-1.5 rounded-full bg-info"></span>Beginner</p>
+
+                            </div>
+
+                            <div class="hidden flex-row gap-2 lg:flex">
+                                <a href="exercise-detail.html" class="flex min-h-10 flex-[2] items-center justify-center rounded-control bg-surface-1 px-4 text-sm font-semibold">View details</a>
+                                <button class="flex min-h-10 flex-1 items-center justify-center gap-1 rounded-control border-2 bg-surface-1 px-4 text-sm border-2 border-accent shadow-glow font-semibold">
+
+                                    + Add
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Dumbbell Floor added to routine" class="flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-xl font-semibold shadow-glow lg:hidden">
+                            
+                            +
+
+                        </button>
+
+                    </article>
+
+                </div>
+
+                <nav aria-label="Pagination" class="mt-5 flex flex-row items-center justify-between lg:mt-6">
+
+                    <p class="hidden font-mono text-muted text-[12px] lg:block">Showing 1-9 of 24</p>
+
+                    <div class="flex w-full flex-row items-center justify-between lg:hidden">
+
+                        <button aria-label="Previous page" disabled class="flex size-11 items-center justify-center rounded-control bg-surface-1 text-lg text-muted opacity-50"><</button>
+                        <p class="font-mono text-muted text-[12px]">Page <span class="text-fg">1</span> of 3</p>
+                        <button aria-label="Next page" class="flex size-11 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-lg shadow-glow">></button>
+
+                    </div>
+
+                    <div class="hidden flex-row items-center gap-2 lg:flex">
+
+                        <button aria-label="Previous page" disabled class="flex size-10 items-center justify-center rounded-control bg-surface-1 text-lg text-muted opacity-50"><</button>
+                        <a href="exercises.html?page=1" aria-current="page" class="flex size-10 items-center justify-center rounded-control border-2 border-accent bg-surface-1 text-sm font-semibold shadow-glow">1</a>
+                        <a href="exercises.html?page=2" class="flex size-10 items-center justify-center rounded-control bg-surface-2 text-sm font-semibold">2</a>
+                        <a href="exercises.html?page=3" class="flex size-10 items-center justify-center rounded-control bg-surface-2 text-sm font-semibold">3</a>
+                        <button aria-label="Next page" class="flex size-10 items-center justify-center rounded-control bg-surface-2 text-lg">></button>
+
+                    </div>
+
+                </nav>
+
+            </div>
+            <div id="menu" class="fixed inset-0 z-50 hidden target:block lg:hidden">
+                <a href="#" aria-label="Close menu" class="absolute inset-0 bg-bg/60"></a>
+
+                <nav aria-label="Mobile" class="absolute inset-y-0 right-0 flex w-[80%] flex-col justify-between gap-2 bg-surface-1 px-5 py-6">
+                    <div>
+                        <div class="mb-6 flex items-center justify-between">
+                            <p class="font-mono text-muted">MENU</p>
+                            <a href="#" aria-label="Close menu" class="flex size-12 items-center justify-center rounded-control bg-surface-2">
+                                <img src="./assets/menu/close-accent-soft.svg" alt="" class="size-6">
+                            </a>
+                        </div>
+
+                        <div class="flex flex-row justify-start items-center rounded-card bg-surface-2 p-5 gap-3">
+                            <div class="flex justify-center items-center bg-surface-1 border-2 border-accent rounded-control shadow-glow w-12 h-12">
+                                <p class="font-display font-bold">YA</p>
+                            </div>
+                            <div>
+                                <p class="font-body text-lg leading-[1.04]">Youssef A.</p>
+                                <p class="font-body text-sm text-muted">12-day streak</p>
+                            </div>
+                        </div>
+
+                        <ul class="flex flex-col gap-2 mt-3">
+                            <li>
+                                <a href="dashboard.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercise-detail/grid-muted.svg" alt="" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold text-fg shadow-glow">
+                                    <img src="./assets/exercises/search-accent-soft.svg" alt="" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/dashboard/history-muted.svg" alt="" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                            Light mode
+                        </label>
+                        <div class="flex flex-col items-start justify-between">
+                            <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
+                            <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </main>
+
+    </body>
+
+</html>

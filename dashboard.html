@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dashboard · FitPlanner</title>
+        <link rel="stylesheet" href="./dist/output.css">
+        <script src="./js/theme.js"></script>
+    </head>
+
+    <body class="has-[:target]:overflow-hidden">
+        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
+        <header class="lg:hidden">
+            <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="./assets/logo-mark.svg" alt="FitPlanner Logo" class="size-9 rounded-chip shadow-glow light:hidden">
+                    <img src="./assets/logo-mark-light.svg" alt="FitPlanner Logo" class="hidden size-9 light:block">
+                    <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                </a>
+
+                <a href="#menu" aria-label="Open menu" class="flex size-12 flex-col items-end justify-center gap-2 lg:hidden">
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                    <span class="h-1 w-8 rounded-full bg-accent shadow-glow"></span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="flex flex-row">
+            
+            <aside class="sticky top-0 hidden justify-between h-screen w-[264px] shrink-0 flex-col bg-surface-1 px-4 py-7 lg:flex">
+                <div>
+                    <a href="dashboard.html" class="mb-10 flex items-center gap-3 px-2">
+                        <img src="./assets/logo-mark.svg" alt="FitPlanner logo" class="size-10 rounded-chip shadow-glow light:hidden">
+                        <img src="./assets/logo-mark-light.svg" alt="FitPlanner logo" class="hidden size-10 light:block">
+                        <span class="font-display text-[22px] font-bold">FITPLANNER</span>
+                    </a>
+    
+                    <nav aria-label="Primary">
+                        <ul class="flex flex-col gap-2">
+                            <li><a href="dashboard.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg text-fg font-bold shadow-glow">
+                                    <img src="./assets/dashboard/grid-accent-soft.svg" alt="Grid icon" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/dashboard/search-muted.svg" alt="Magnifier icon" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="List icon" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="Timer icon" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/history-muted.svg" alt="Clock rewinding icon" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/user-muted.svg" alt="User outline icon" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                        Light mode
+                    </label>
+                </div>
+            </aside>
+
+            <div class="mx-auto flex w-full min-w-0 flex-col px-4 pb-6 pt-0 lg:px-8">
+
+                <div class="flex flex-row items-end justify-between">
+
+                    <div class="flex flex-col">
+
+                        <p class="font-mono text-muted text-[12px] leading-[3] tracking-[2px]">FRI · 23 OCT</p>
+                        <h1 class="font-display text-[30px] font-bold leading-[1.04] lg:text-[36px]">Welcome back, Youssef</h1>
+
+                    </div>
+
+                    <div class="hidden flex-row items-center gap-3 lg:flex">
+
+                        <div class="flex h-12 w-72 items-center gap-3 rounded-control bg-surface-1 px-4">
+                            <img src="assets/dashboard/search-muted.svg" alt="Magnifier icon" class="size-4">
+                            <input type="search" placeholder="Search exercises" aria-label="Search exercises" class="w-full bg-transparent text-sm text-fg outline-none placeholder:text-muted">
+                        </div>
+
+                        <a href="workout.html" class="flex h-12 items-center gap-2 rounded-control border-2 border-accent bg-surface-1 px-5 text-sm font-semibold shadow-glow">
+                            <img src="assets/dashboard/play-accent-soft.svg" alt="Play button icon" class="size-3">
+                            Start workout
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-12 gap-3 gap-y-5 lg:gap-5 mt-5">
+
+                    <div class="relative flex flex-col justify-start rounded-control bg-surface-2 p-4 gap-3 lg:col-span-4 lg:p-5">
+
+                        <p class="font-mono text-muted text-[12px] leading-[1] lg:hidden">WORKOUTS</p>
+                        <p class="hidden font-mono text-muted text-[12px] leading-[1] tracking-[2px] lg:flex">TOTAL WORKOUTS</p>
+                        <h1 class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">48</h1>
+                        <div class="flex flex-row">
+
+                            <p class="font-display text-success text-[12px] leading-[0.5] mr-1">+4</p> <p class="font-mono text-muted text-[12px] leading-[0.5]">this week</p>
+
+                        </div>
+
+                        <div class="absolute right-4 top-4 hidden size-10 items-center justify-center rounded-control bg-surface-1 p-2 lg:flex">
+                            <img src="assets/dashboard/dumbbell-accent-soft.svg" alt="Dumbbell icon" class="size-5">
+                        </div>
+
+                    </div>
+
+                    <div class="relative flex flex-col justify-start rounded-control bg-surface-2 p-4 gap-3 lg:col-span-4 lg:p-5">
+
+                        <p class="font-mono text-muted text-[12px] leading-[1] lg:hidden">STREAK</p>
+                        <p class="hidden font-mono text-muted text-[12px] leading-[1] tracking-[2px] lg:flex">ACTIVE STREAK</p>
+                        <div class="flex flex-row items-baseline">
+
+                            <h1 class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">12</h1> <h1 class="font-display text-muted text-[20px] font-bold leading-[1] ml-1">days</h1>
+
+                        </div>
+                        <p class="font-mono text-muted text-[12px] leading-[0.5]">Best: 21<span class="hidden lg:inline"> days</span></p>
+
+                        <div class="absolute right-4 top-4 hidden size-10 items-center justify-center rounded-control bg-surface-1 p-2 lg:flex">
+                            <img src="assets/dashboard/flame-warning.svg" alt="Flame icon" class="size-5">
+                        </div>
+
+                    </div>
+
+                    <div class="relative flex flex-col col-span-2 justify-start rounded-control bg-surface-2 p-4 gap-3 lg:col-span-4 lg:p-5">
+
+                        <p class="font-mono text-muted text-[12px] leading-[1] tracking-[2px]">CALORIES BURNED</p>
+                        <div class="flex flex-row items-baseline">
+
+                            <h1 class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">18,420</h1> <h1 class="font-display text-muted text-[20px] font-bold leading-[1] ml-1">kcal</h1>
+
+                        </div>
+                        <p class="hidden font-mono text-muted text-[12px] leading-[0.5] lg:block">Estimated, all time</p>
+
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 lg:top-4 lg:translate-y-0">
+
+                            <div class="flex size-12 items-center justify-center rounded-control bg-surface-1 p-2 lg:size-10">
+
+                                <img src="assets/dashboard/bolt-info.svg" alt="Hollow lightning bolt icon" class="size-6 lg:size-5">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div aria-hidden="true" class="flex flex-col col-span-2 gap-3 rounded-card border border-accent bg-surface-1 p-6 shadow-glow lg:order-last lg:col-span-5 lg:gap-4 lg:p-6">
+
+                        <p class="font-mono text-accent-soft text-[12px] leading-[1]">UP NEXT</p>
+                        <h1 class="font-display text-[20px] font-bold leading-[1.2] lg:text-[24px]">Push Day A</h1>
+                        <p class="font-semibold text-muted text-[12px] leading-[1.2]">5 exercises · ~55 min<span class="hidden lg:inline"> · Chest, Shoulders, Triceps</span></p>
+                        <a href="workout.html" class="flex min-h-16 gap-2 items-center justify-center rounded-control bg-surface-2 px-7 text-xl font-semibold border-accent border-2 shadow-glow lg:hidden">
+                            <img src="assets/dashboard/play-accent-soft.svg" alt="Image of play button" class="size-4">
+                            Start workout
+                        </a>
+
+                        <div class="hidden flex-row gap-3 lg:mt-auto lg:flex">
+
+                            <a href="workout.html" class="flex min-h-12 flex-1 items-center justify-center rounded-control border-2 border-accent bg-surface-2 px-5 text-sm font-semibold shadow-glow">Start now</a>
+                            <a href="routine-builder.html" class="flex min-h-12 flex-1 items-center justify-center rounded-control border-2 border-transparent bg-surface-2 px-5 text-sm font-semibold">Edit routine</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col col-span-2 rounded-control bg-surface-1 p-3 lg:col-span-7 lg:p-6">
+
+                        <div class="flex items-center justify-between">
+
+                            <div class="flex flex-col">
+
+                                <p class="font-display text-[18px] leading-[2] lg:text-[20px] lg:leading-[1.5]">This week</p>
+                                <p class="hidden font-mono text-muted text-[12px] lg:block">Calories burned per day · 2,670 kcal total</p>
+
+                            </div>
+
+                            <div class="flex items-center gap-0 rounded-xl bg-surface-2 p-1">
+
+                                <button class="flex h-11 items-center justify-center rounded-lg px-3 text-sm font-semibold text-muted">
+                                    <span class="lg:hidden">Min</span><span class="hidden lg:inline">Duration</span>
+                                </button>
+
+                                <button class="flex h-11 items-center justify-center rounded-lg border-2 border-accent bg-surface-1 px-3 text-sm font-semibold">
+                                    <span class="lg:hidden">kcal</span><span class="hidden lg:inline">Calories</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-5 flex flex-row items-start gap-3">
+
+                            <div class="hidden h-36 flex-col justify-between font-mono text-[10px] text-muted lg:flex lg:h-56">
+                                <span>750</span>
+                                <span>500</span>
+                                <span>250</span>
+                                <span>0</span>
+                            </div>
+
+                            <div class="min-w-0 flex-1">
+
+                                <div class="grid h-36 grid-cols-7 gap-2 lg:h-56">
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[56%] w-full rounded-t-lg bg-line">
+                                            <span class="absolute -top-5 left-1/2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] text-muted lg:block">420</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[81%] w-full rounded-t-lg bg-line">
+                                            <span class="absolute -top-5 left-1/2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] text-muted lg:block">610</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[4%] w-full rounded-t-lg bg-line">
+                                            <span class="absolute -top-5 left-1/2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] text-muted lg:block">Rest</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[72%] w-full rounded-t-lg bg-line">
+                                            <span class="absolute -top-5 left-1/2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] text-muted lg:block">540</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[96%] w-full rounded-t-lg bg-accent shadow-glow">
+                                            <span class="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap font-semibold text-xs">720</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[4%] w-full rounded-t-lg bg-line">
+                                            <span class="absolute -top-5 left-1/2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] text-muted lg:block">Rest</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative flex h-full items-end">
+                                        <div class="relative h-[51%] w-full rounded-t-lg bg-line">
+                                            <span class="absolute -top-5 left-1/2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] text-muted lg:block">380</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="mt-2 grid grid-cols-7 gap-2">
+                                    <span class="text-center font-mono text-[10px] text-muted"><span class="lg:hidden">M</span><span class="hidden lg:inline">MON</span></span>
+                                    <span class="text-center font-mono text-[10px] text-muted"><span class="lg:hidden">T</span><span class="hidden lg:inline">TUE</span></span>
+                                    <span class="text-center font-mono text-[10px] text-muted"><span class="lg:hidden">W</span><span class="hidden lg:inline">WED</span></span>
+                                    <span class="text-center font-mono text-[10px] text-muted"><span class="lg:hidden">T</span><span class="hidden lg:inline">THU</span></span>
+                                    <span class="text-center font-mono text-[10px] text-accent"><span class="lg:hidden">F</span><span class="hidden lg:inline">FRI</span></span>
+                                    <span class="text-center font-mono text-[10px] text-muted"><span class="lg:hidden">S</span><span class="hidden lg:inline">SAT</span></span>
+                                    <span class="text-center font-mono text-[10px] text-muted"><span class="lg:hidden">S</span><span class="hidden lg:inline">SUN</span></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="font-semibold text-muted text-[12px] leading-[2] lg:hidden">2,670 kcal this week</p>
+
+                    </div>
+
+                    <div class="rounded-control col-span-2 bg-surface-1 p-5 lg:col-span-5 lg:order-2 lg:p-6">
+
+                        <p class="font-display text-xl font-bold">Muscle groups</p>
+                        <p class="hidden font-mono text-muted text-[12px] lg:block">Share of sets, last 30 days</p>
+
+                        <div class="mt-5 flex items-center gap-6">
+
+                            <div class="relative h-36 w-36 shrink-0">
+
+                                <svg viewBox="0 0 100 100" class="h-full w-full -rotate-90">
+
+                                    <circle cx="50" cy="50" r="43" fill="none" stroke-width="14" pathLength="100"
+                                            stroke="#b24bff" stroke-dasharray="29.2 70.8" stroke-dashoffset="0" />
+                                    <circle cx="50" cy="50" r="43" fill="none" stroke-width="14" pathLength="100"
+                                            stroke="#3aaedb" stroke-dasharray="24.2 75.8" stroke-dashoffset="-30" />
+                                    <circle cx="50" cy="50" r="43" fill="none" stroke-width="14" pathLength="100"
+                                            stroke="#4cd637" stroke-dasharray="24.2 75.8" stroke-dashoffset="-55" />
+                                    <circle cx="50" cy="50" r="43" fill="none" stroke-width="14" pathLength="100"
+                                            stroke="#f5a33a" stroke-dasharray="11.2 88.8" stroke-dashoffset="-80" />
+                                    <circle cx="50" cy="50" r="43" fill="none" stroke-width="14" pathLength="100"
+                                            stroke="#ecebf5" stroke-dasharray="7.2 92.8" stroke-dashoffset="-92" />
+                                </svg>
+
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+
+                                    <span class="font-display text-3xl font-bold leading-none">312</span>
+                                    <span class="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted">Sets</span>
+
+                                </div>
+
+                            </div>
+
+                            <ul class="flex flex-1 flex-col gap-3 text-sm">
+
+                                <li class="flex items-center gap-3">
+                                    <span class="h-3.5 w-3.5 rounded-[4px] bg-[#b24bff]"></span>
+                                    <span>Chest</span>
+                                    <span class="ml-auto text-muted">30%</span>
+                                </li>
+
+                                <li class="flex items-center gap-3">
+                                    <span class="h-3.5 w-3.5 rounded-[4px] bg-[#3aaedb]"></span>
+                                    <span>Back</span>
+                                    <span class="ml-auto text-muted">25%</span>
+                                </li>
+
+                                <li class="flex items-center gap-3">
+                                    <span class="h-3.5 w-3.5 rounded-[4px] bg-[#4cd637]"></span>
+                                    <span>Legs</span>
+                                    <span class="ml-auto text-muted">25%</span>
+                                </li>
+
+                                <li class="flex items-center gap-3">
+                                    <span class="h-3.5 w-3.5 rounded-[4px] bg-[#f5a33a]"></span>
+                                    <span>Cardio</span>
+                                    <span class="ml-auto text-muted">12%</span>
+                                </li>
+
+                                <li class="flex items-center gap-3">
+                                    <span class="h-3.5 w-3.5 rounded-[4px] bg-[#ecebf5]"></span>
+                                    <span>Core</span>
+                                    <span class="ml-auto text-muted">8%</span>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col col-span-2 gap-y-5 lg:col-span-7 lg:order-last lg:gap-y-4 lg:rounded-control lg:bg-surface-1 lg:p-6">
+
+                        <div class="flex justify-between items-baseline">
+
+                            <p class="font-display text-[18px] lg:text-[20px]">Recent workouts</p>
+
+                            <a href="history.html" class="flex font-semibold text-accent-soft text-sm underline">View all</a>
+
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+
+                            <div class="flex items-center justify-between rounded-control bg-surface-2 p-4 gap-3 lg:py-3">
+
+                                <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+
+                                    <p class="hidden w-14 font-mono text-muted text-[12px] lg:block">THU 22</p>
+                                    <h1 class="font-semibold text-[16px] leading-[1.5]">Pull Day A</h1>
+                                    <p class="font-mono text-muted text-[14px] leading-[1.5] lg:hidden">Thu 22 · 52 min</p>
+
+                                </div>
+
+                                <div class="flex flex-row items-center gap-6">
+
+                                    <p class="hidden font-mono text-muted text-[14px] lg:block">52 min</p>
+                                    <p class="font-semibold text-muted text-[14px] lg:w-20 lg:text-right">540 kcal</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between rounded-control bg-surface-2 p-4 gap-3 lg:py-3">
+
+                                <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+
+                                    <p class="hidden w-14 font-mono text-muted text-[12px] lg:block">TUE 20</p>
+                                    <h1 class="font-semibold text-[16px] leading-[1.5]">Leg Day B</h1>
+                                    <p class="font-mono text-muted text-[14px] leading-[1.5] lg:hidden">Tue 20 · 64 min</p>
+
+                                </div>
+
+                                <div class="flex flex-row items-center gap-6">
+
+                                    <p class="hidden font-mono text-muted text-[14px] lg:block">64 min</p>
+                                    <p class="font-semibold text-muted text-[14px] lg:w-20 lg:text-right">610 kcal</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between rounded-control bg-surface-2 p-4 gap-3 lg:py-3">
+
+                                <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+
+                                    <p class="hidden w-14 font-mono text-muted text-[12px] lg:block">MON 19</p>
+                                    <h1 class="font-semibold text-[16px] leading-[1.5]">Push Day A</h1>
+                                    <p class="font-mono text-muted text-[14px] leading-[1.5] lg:hidden">Mon 19 · 48 min</p>
+
+                                </div>
+
+                                <div class="flex flex-row items-center gap-6">
+
+                                    <p class="hidden font-mono text-muted text-[14px] lg:block">48 min</p>
+                                    <p class="font-semibold text-muted text-[14px] lg:w-20 lg:text-right">420 kcal</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="menu" class="fixed inset-0 z-50 hidden target:block lg:hidden">
+                <a href="#" aria-label="Close menu" class="absolute inset-0 bg-bg/60"></a>
+
+                <nav aria-label="Mobile" class="absolute inset-y-0 right-0 flex w-[80%] flex-col justify-between gap-2 bg-surface-1 px-5 py-6">
+                    <div>
+                        <div class="mb-6 flex items-center justify-between">
+                            <p class="font-mono text-muted">MENU</p>
+                            <a href="#" aria-label="Close menu" class="flex size-12 items-center justify-center rounded-control bg-surface-2">
+                                <img src="./assets/menu/close-accent-soft.svg" alt="" class="size-6">
+                            </a>
+                        </div>
+
+                        <div class="flex flex-row justify-start items-center rounded-card bg-surface-2 p-5 gap-3">
+                            <div class="flex justify-center items-center bg-surface-1 border-2 border-accent rounded-control shadow-glow w-12 h-12">
+                                <p class="font-display font-bold">YA</p>
+                            </div>
+                            <div>
+                                <p class="font-body text-lg leading-[1.04]">Youssef A.</p>
+                                <p class="font-body text-sm text-muted">12-day streak</p>
+                            </div>
+                        </div>
+
+                        <ul class="flex flex-col gap-2 mt-3">
+                            <li>
+                                <a href="dashboard.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg font-semibold text-fg shadow-glow">
+                                    <img src="./assets/dashboard/grid-accent-soft.svg" alt="" class="size-6">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/menu/search-muted.svg" alt="" class="size-6">
+                                    Exercises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="routine-builder.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/list-muted.svg" alt="" class="size-6">
+                                    Routines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workout.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/timer-muted.svg" alt="" class="size-6">
+                                    Workout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="history.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/dashboard/history-muted.svg" alt="" class="size-6">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-transparent px-4 text-lg text-muted hover:text-fg">
+                                    <img src="./assets/exercises/user-muted.svg" alt="" class="size-6">
+                                    Profile & Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
+                            Light mode
+                        </label>
+                        <div class="flex flex-col items-start justify-between">
+                            <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
+                            <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </main>
+
+    </body>
+
+</html>
