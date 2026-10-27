@@ -9,7 +9,6 @@
     </head>
 
     <body class="has-[:target]:overflow-hidden">
-        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
         <header class="lg:hidden">
             <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
                 <a href="index.html" class="flex items-center gap-3">
@@ -77,10 +76,6 @@
                     </nav>
                 </div>
                 <div>
-                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
-                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
-                        Light mode
-                    </label>
                 </div>
             </aside>
 
@@ -97,7 +92,7 @@
 
                     <div class="hidden flex-row items-center gap-3 lg:flex">
 
-                        <div class="flex h-12 w-72 items-center gap-3 rounded-control bg-surface-1 px-4">
+                        <div class="flex h-12 w-72 items-center gap-3 rounded-control focus-within:outline-2 focus-within:outline-accent-soft bg-surface-1 px-4">
                             <img src="assets/dashboard/search-muted.svg" alt="Magnifier icon" class="size-4">
                             <input type="search" placeholder="Search exercises" aria-label="Search exercises" class="w-full bg-transparent text-sm text-fg outline-none placeholder:text-muted">
                         </div>
@@ -117,7 +112,7 @@
 
                         <p class="font-mono text-muted text-[12px] leading-[1] lg:hidden">WORKOUTS</p>
                         <p class="hidden font-mono text-muted text-[12px] leading-[1] tracking-[2px] lg:flex">TOTAL WORKOUTS</p>
-                        <h1 class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">48</h1>
+                        <p class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">48</p>
                         <div class="flex flex-row">
 
                             <p class="font-display text-success text-[12px] leading-[0.5] mr-1">+4</p> <p class="font-mono text-muted text-[12px] leading-[0.5]">this week</p>
@@ -136,7 +131,7 @@
                         <p class="hidden font-mono text-muted text-[12px] leading-[1] tracking-[2px] lg:flex">ACTIVE STREAK</p>
                         <div class="flex flex-row items-baseline">
 
-                            <h1 class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">12</h1> <h1 class="font-display text-muted text-[20px] font-bold leading-[1] ml-1">days</h1>
+                            <p class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">12</p> <p class="font-display text-muted text-[20px] font-bold leading-[1] ml-1">days</p>
 
                         </div>
                         <p class="font-mono text-muted text-[12px] leading-[0.5]">Best: 21<span class="hidden lg:inline"> days</span></p>
@@ -152,7 +147,7 @@
                         <p class="font-mono text-muted text-[12px] leading-[1] tracking-[2px]">CALORIES BURNED</p>
                         <div class="flex flex-row items-baseline">
 
-                            <h1 class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">18,420</h1> <h1 class="font-display text-muted text-[20px] font-bold leading-[1] ml-1">kcal</h1>
+                            <p class="font-display text-[30px] font-bold leading-[1] lg:text-[40px]">18,420</p> <p class="font-display text-muted text-[20px] font-bold leading-[1] ml-1">kcal</p>
 
                         </div>
                         <p class="hidden font-mono text-muted text-[12px] leading-[0.5] lg:block">Estimated, all time</p>
@@ -172,7 +167,7 @@
                     <div aria-hidden="true" class="flex flex-col col-span-2 gap-3 rounded-card border border-accent bg-surface-1 p-6 shadow-glow lg:order-last lg:col-span-5 lg:gap-4 lg:p-6">
 
                         <p class="font-mono text-accent-soft text-[12px] leading-[1]">UP NEXT</p>
-                        <h1 class="font-display text-[20px] font-bold leading-[1.2] lg:text-[24px]">Push Day A</h1>
+                        <h3 class="font-display text-[20px] font-bold leading-[1.2] lg:text-[24px]">Push Day A</h3>
                         <p class="font-semibold text-muted text-[12px] leading-[1.2]">5 exercises · ~55 min<span class="hidden lg:inline"> · Chest, Shoulders, Triceps</span></p>
                         <a href="workout.html" class="flex min-h-16 gap-2 items-center justify-center rounded-control bg-surface-2 px-7 text-xl font-semibold border-accent border-2 shadow-glow lg:hidden">
                             <img src="assets/dashboard/play-accent-soft.svg" alt="Image of play button" class="size-4">
@@ -375,7 +370,7 @@
                                 <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
 
                                     <p class="hidden w-14 font-mono text-muted text-[12px] lg:block">THU 22</p>
-                                    <h1 class="font-semibold text-[16px] leading-[1.5]">Pull Day A</h1>
+                                    <h3 class="font-semibold text-[16px] leading-[1.5]">Pull Day A</h3>
                                     <p class="font-mono text-muted text-[14px] leading-[1.5] lg:hidden">Thu 22 · 52 min</p>
 
                                 </div>
@@ -394,7 +389,7 @@
                                 <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
 
                                     <p class="hidden w-14 font-mono text-muted text-[12px] lg:block">TUE 20</p>
-                                    <h1 class="font-semibold text-[16px] leading-[1.5]">Leg Day B</h1>
+                                    <h3 class="font-semibold text-[16px] leading-[1.5]">Leg Day B</h3>
                                     <p class="font-mono text-muted text-[14px] leading-[1.5] lg:hidden">Tue 20 · 64 min</p>
 
                                 </div>
@@ -413,7 +408,7 @@
                                 <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
 
                                     <p class="hidden w-14 font-mono text-muted text-[12px] lg:block">MON 19</p>
-                                    <h1 class="font-semibold text-[16px] leading-[1.5]">Push Day A</h1>
+                                    <h3 class="font-semibold text-[16px] leading-[1.5]">Push Day A</h3>
                                     <p class="font-mono text-muted text-[14px] leading-[1.5] lg:hidden">Mon 19 · 48 min</p>
 
                                 </div>
@@ -496,10 +491,6 @@
                         </ul>
                     </div>
                     <div>
-                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
-                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
-                            Light mode
-                        </label>
                         <div class="flex flex-col items-start justify-between">
                             <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
                             <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>

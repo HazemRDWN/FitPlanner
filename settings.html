@@ -9,7 +9,7 @@
 </head>
 
 <body class="has-[:target]:overflow-hidden"> 
-    <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light mode" class="theme-toggle sr-only">
+    <input type="checkbox" id="theme-toggle" role="switch" aria-label="Dark mode" checked class="theme-toggle sr-only">
     <header class="lg:hidden">
         <nav aria-label="Primary" class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-6 lg:px-6">
             <a href="index.html" class="flex items-center gap-3">
@@ -69,7 +69,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="settings.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg text-fg">
+                                <a href="settings.html" aria-current="page" class="flex min-h-14 items-center gap-4 rounded-control border-2 border-accent bg-surface-2 px-4 text-lg text-fg font-bold shadow-glow">
                                     <img src="./assets/settings/user-accent-soft.svg" alt="User outline icon" class="size-6">
                                     Profile & Settings
                                 </a>
@@ -78,10 +78,6 @@
                     </nav>
                 </div>
                 <div>
-                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control px-4 text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
-                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
-                        Light mode
-                    </label>
                 </div>
             </aside>
 
@@ -115,7 +111,7 @@
                                 <p class="font-display text-[20px] font-bold leading-[1]">21 d</p>
                             </div>
 
-                            <button class="flex min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-xs font-semibold">Change photo</button>
+                            <a href="#" class="flex min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-xs font-semibold">Change photo</a>
 
                         </div>
 
@@ -133,23 +129,23 @@
 
                                 <label class="col-span-2 flex flex-col gap-1">
                                     <span class="font-mono text-muted text-[10px] tracking-[2px]">FULL NAME</span>
-                                    <input type="text" value="Youssef A." class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <input type="text" value="Youssef A." class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg focus-visible:outline-2 focus-visible:outline-accent-soft">
                                 </label>
 
                                 <label class="flex flex-col gap-1">
                                     <span class="font-mono text-muted text-[10px] tracking-[2px]">HEIGHT (CM)</span>
-                                    <input type="number" value="180" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <input type="number" value="180" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg focus-visible:outline-2 focus-visible:outline-accent-soft">
                                 </label>
 
                                 <label class="flex flex-col gap-1">
                                     <span class="font-mono text-muted text-[10px] tracking-[2px]">WEIGHT (KG)</span>
-                                    <input type="number" value="78" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <input type="number" value="78" class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg focus-visible:outline-2 focus-visible:outline-accent-soft">
                                     <span class="hidden font-mono text-muted text-[10px] lg:block">Used to estimate calories</span>
                                 </label>
 
                                 <label class="col-span-2 flex flex-col gap-1 lg:col-span-1">
                                     <span class="font-mono text-muted text-[10px] tracking-[2px]">WEEKLY TARGET</span>
-                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg focus-visible:outline-2 focus-visible:outline-accent-soft">
                                         <option selected>4 workouts</option>
                                         <option>5 workouts</option>
                                         <option>6 workouts</option>
@@ -158,7 +154,7 @@
 
                                 <label class="hidden flex-col gap-1 lg:flex">
                                     <span class="font-mono text-muted text-[10px] tracking-[2px]">MAIN GOAL</span>
-                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg outline-none">
+                                    <select class="h-11 rounded-control bg-surface-2 px-3 text-sm text-fg focus-visible:outline-2 focus-visible:outline-accent-soft">
                                         <option selected>Build muscle</option>
                                         <option>Lose fat</option>
                                         <option>Maintain</option>
@@ -169,8 +165,8 @@
 
                             <div class="flex flex-row justify-end gap-3">
 
-                                <button class="hidden min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold lg:flex">Discard</button>
-                                <button class="flex min-h-14 w-full items-center justify-center rounded-control border-2 border-accent bg-surface-1 px-6 text-base font-semibold shadow-glow lg:min-h-11 lg:w-auto lg:text-sm">Save changes</button>
+                                <a href="#" class="hidden min-h-11 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold lg:flex">Discard</a>
+                                <a href="#" class="flex min-h-14 w-full items-center justify-center rounded-control border-2 border-accent bg-surface-1 px-6 text-base font-semibold shadow-glow lg:min-h-11 lg:w-auto lg:text-sm">Save changes</a>
 
                             </div>
 
@@ -188,11 +184,9 @@
                                         <p class="text-sm font-semibold">Dark mode</p>
                                         <p class="font-semibold text-muted text-[10px]"><span class="lg:hidden">Saves battery on OLED</span><span class="hidden lg:inline">Pure black saves battery on OLED screens</span></p>
                                     </div>
-
-                                    <button role="switch" aria-checked="true" aria-label="Dark mode" class="flex h-7 w-12 shrink-0 items-center justify-end rounded-full border-2 border-accent bg-surface-2 px-1">
-                                        <span class="size-4 rounded-full shadow-glow bg-accent-soft"></span>
-                                    </button>
-
+                                    <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
+                                        <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform after:translate-x-5 light:after:translate-x-0 light:after:bg-muted"></span>
+                                    </label>
                                 </div>
 
                                 <div class="flex flex-row items-center justify-between gap-3 border-t border-line py-3">
@@ -210,7 +204,7 @@
 
                                     <p class="text-sm font-semibold"><span class="lg:hidden">Default rest</span><span class="hidden lg:inline">Default rest timer</span></p>
 
-                                    <select aria-label="Default rest timer" class="h-9 rounded-control bg-surface-2 px-3 text-xs text-fg outline-none">
+                                    <select aria-label="Default rest timer" class="h-9 rounded-control bg-surface-2 px-3 text-xs text-fg focus-visible:outline-2 focus-visible:outline-accent-soft">
                                         <option>60 s</option>
                                         <option>75 s</option>
                                         <option selected>90 s</option>
@@ -240,19 +234,19 @@
 
                                 <div class="flex flex-col gap-3 lg:hidden">
 
-                                    <button class="flex min-h-12 items-center justify-between rounded-control bg-surface-2 px-4 text-sm font-semibold">
+                                    <a href="#" class="flex min-h-12 items-center justify-between rounded-control bg-surface-2 px-4 text-sm font-semibold">
                                         Export data (CSV / JSON)
                                         <span class="text-muted">></span>
-                                    </button>
+                                    </a>
 
-                                    <button class="flex min-h-12 items-center justify-between rounded-control bg-surface-2 px-4 text-sm font-semibold">
+                                    <a href="#" class="flex min-h-12 items-center justify-between rounded-control bg-surface-2 px-4 text-sm font-semibold">
                                         Change password
                                         <span class="text-muted">></span>
-                                    </button>
+                                    </a>
 
-                                    <button class="flex min-h-12 items-center justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Log out</button>
+                                    <a href="index.html" class="flex min-h-12 items-center justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Log out</a>
 
-                                    <button class="flex min-h-12 items-center justify-center rounded-control border-1 border-error bg-surface-1 px-4 text-sm font-semibold text-error">Clear all local data…</button>
+                                    <a href="#" class="flex min-h-12 items-center justify-center rounded-control border-1 border-error bg-surface-1 px-4 text-sm font-semibold text-error">Clear all local data…</a>
 
                                 </div>
 
@@ -261,12 +255,12 @@
                                     <p class="font-mono text-muted text-[12px] leading-[1.4]">Routines and history are stored in this browser.</p>
 
                                     <div class="flex flex-row flex-wrap gap-2">
-                                        <button class="flex min-h-10 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Export data</button>
-                                        <button class="flex min-h-10 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Change password</button>
-                                        <button class="flex min-h-10 items-center justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Log out</button>
+                                        <a href="#" class="flex min-h-10 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Export data</a>
+                                        <a href="#" class="flex min-h-10 items-center justify-center rounded-control bg-surface-2 px-4 text-sm font-semibold">Change password</a>
+                                        <a href="index.html" class="flex min-h-10 items-center justify-center rounded-control border-1 border-line bg-surface-1 px-4 text-sm font-semibold">Log out</a>
                                     </div>
 
-                                    <button class="flex min-h-10 w-fit items-center justify-center rounded-control border-1 border-error bg-surface-1 px-4 text-sm font-semibold text-error">Clear all local data…</button>
+                                    <a href="#" class="flex min-h-10 w-fit items-center justify-center rounded-control border-1 border-error bg-surface-1 px-4 text-sm font-semibold text-error">Clear all local data…</a>
 
                                 </div>
 
@@ -341,10 +335,6 @@
                         </ul>
                     </div>
                     <div>
-                        <label for="theme-toggle" class="flex min-h-14 cursor-pointer items-center gap-4 rounded-control text-lg text-muted hover:text-fg [:root:has(#theme-toggle:focus-visible)_&]:outline-2 [:root:has(#theme-toggle:focus-visible)_&]:outline-accent-soft">
-                            <span aria-hidden="true" class="relative h-7 w-12 shrink-0 rounded-full bg-surface-2 after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-accent after:transition-transform light:after:translate-x-5"></span>
-                            Light mode
-                        </label>
                         <div class="flex flex-col items-start justify-between">
                             <p class="font-body text-xs text-muted">© 2026 FitPlanner · SW 302 course project</p>
                             <p class="font-body text-xs text-muted">Exercise data: Wger / ExerciseDB</p>
@@ -356,4 +346,4 @@
 
 </body>
 
-</html
+</html>
