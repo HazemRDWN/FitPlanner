@@ -36,3 +36,6 @@ Styles live in `src/style.css` (theme colours and fonts). Icons are in `assets/`
 ## Team
 
 Hazem Ahmed Refaat | 202401389 · Youssof Amgad Abdelrahman | 202400370 · Youssuf Hosameldin Mohammed | 202402592
+
+—*Figma Link*-
+https://www.figma.com/design/14GSQ1i97PX2XxSTHa8fcQ/FitPlanner---Phase-2-UI-Design?m=auto&t=BBeKvWfO7MeQPtCe-1
